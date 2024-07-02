@@ -1406,7 +1406,7 @@ div.asp_r.asp_r_1.vertical{
         }
     }
     .navblock_txt{
-        h5{
+        p{
             color: #030504;
             @include semi;
             margin-bottom: 12px;
@@ -1867,8 +1867,9 @@ div.asp_r.asp_r_1.vertical{
         .event-content{
             height: 100%;
             padding: 16px 15px 16px 24px;
-            h4{
+            h3{
                 color: #030504;
+                font-size: 18px;
                 margin-bottom: 16px;
             }
             h5{
@@ -3596,6 +3597,9 @@ p.news_category {
         color: #030504;
         margin-bottom: 0;
     }
+    h3{
+        font-size: 18px;
+    }
 }
 
 .signup_alerts_news {
@@ -4562,28 +4566,26 @@ body .is-layout-constrained>.wp-block-group {
     }
 }
 
-//Alerts
+/*================================= Alerts Start =======================================*/
 .alert-area {
     background: #BC0606;
-    position: absolute;
-    top: 104px;
+    position: relative;
     z-index: 9;
     width: 100%;
     .alert {
-        background: none;
         border: 0;
-        text-align: center;
         margin: 0;
-        padding-right: 40px;
+        background: none;
+        text-align: center;
+        padding: 8px 40px 8px 10px;
     }
     p {
-        color: $black;
-        font-weight: 500;
-        margin-bottom: 2px;
+        color: $white;
+        margin-bottom: 0;
     }
     a {
-        color: $black;
-        font-weight: 500;
+        color: $white;
+        @include semi;
     }
     p:empty {
         display: none;
@@ -4591,12 +4593,17 @@ body .is-layout-constrained>.wp-block-group {
     .close {
         position: absolute;
         right: 20px;
-        top: 10px;
+        top: 4px;
         opacity: 1;
         color: $white;
         visibility: visible;
+        span{
+            font-size: 16px;
+            font-weight: normal;
+        }
     }
 }
+/*================================= Alerts End =======================================*/
 
 //Ajax pagination
 .cvf-universal-pagination {

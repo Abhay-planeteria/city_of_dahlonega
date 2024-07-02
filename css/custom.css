@@ -1403,7 +1403,7 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
     height: 57px;
   }
 }
-.nav_section .navblock_txt h5 {
+.nav_section .navblock_txt p {
   color: #030504;
   font-weight: 600;
   margin-bottom: 12px;
@@ -1863,8 +1863,9 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
   height: 100%;
   padding: 16px 15px 16px 24px;
 }
-.up-meetings-wrapper .event-box .event-content h4 {
+.up-meetings-wrapper .event-box .event-content h3 {
   color: #030504;
+  font-size: 18px;
   margin-bottom: 16px;
 }
 .up-meetings-wrapper .event-box .event-content h5 {
@@ -3483,6 +3484,9 @@ p.news_category {
   color: #030504;
   margin-bottom: 0;
 }
+.newsBody h3 {
+  font-size: 18px;
+}
 
 .signup_alerts_news {
   background: #FCF3DE;
@@ -4418,28 +4422,27 @@ body .is-layout-constrained > .wp-block-group {
   padding: 73px 90px;
 }
 
+/*================================= Alerts Start =======================================*/
 .alert-area {
   background: #BC0606;
-  position: absolute;
-  top: 104px;
+  position: relative;
   z-index: 9;
   width: 100%;
 }
 .alert-area .alert {
-  background: none;
   border: 0;
-  text-align: center;
   margin: 0;
-  padding-right: 40px;
+  background: none;
+  text-align: center;
+  padding: 8px 40px 8px 10px;
 }
 .alert-area p {
-  color: #000000;
-  font-weight: 500;
-  margin-bottom: 2px;
+  color: #ffffff;
+  margin-bottom: 0;
 }
 .alert-area a {
-  color: #000000;
-  font-weight: 500;
+  color: #ffffff;
+  font-weight: 600;
 }
 .alert-area p:empty {
   display: none;
@@ -4447,12 +4450,17 @@ body .is-layout-constrained > .wp-block-group {
 .alert-area .close {
   position: absolute;
   right: 20px;
-  top: 10px;
+  top: 4px;
   opacity: 1;
   color: #ffffff;
   visibility: visible;
 }
+.alert-area .close span {
+  font-size: 16px;
+  font-weight: normal;
+}
 
+/*================================= Alerts End =======================================*/
 .cvf-universal-pagination ul {
   margin: 0;
   padding: 0;
