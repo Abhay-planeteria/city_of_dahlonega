@@ -665,9 +665,6 @@ D6A529 - goldenrod
   .main_header .megamenu li {
     margin-bottom: 18px;
   }
-  .main_wrapper {
-    padding-top: 106px;
-  }
   .fixed_btns {
     display: none;
   }
@@ -987,7 +984,7 @@ D6A529 - goldenrod
     right: 70px;
   }
   .logged-in .main_wrapper {
-    padding-top: 135px;
+    padding-top: 50px;
   }
   /*.routRow {
       .leftColumn {}

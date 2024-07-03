@@ -157,7 +157,7 @@ p {
     color: $black;
     font-size: 16px;
     @include regular;
-    line-height: normal;
+    line-height: 24px;
     font-family: $source-sans;
 }
 
@@ -319,7 +319,7 @@ video {
 
 .form-control {
     border: 0;
-    min-height: 40px;
+    min-height: 50px;
     border-radius: 0px;
     background-color: $white;
 }
@@ -341,7 +341,7 @@ select {
     background-repeat: no-repeat;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-position: top 10px right 12px;
+    background-position: top 16px right 12px;
     min-width: 130px;
     background-size: 20px;
     color: $black;
@@ -352,8 +352,14 @@ select {
         cursor: pointer;
         //border: 1px solid #000;
         overflow: hidden;
-        border-radius: 5px;
+        border-radius: 0px;
+        padding-left: 16px;
+        padding-right: 16px;
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    }
+    &:focus {
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25)!important;
+        outline: solid 1px $dark-slate-blue !important;
     }
 }
 
@@ -387,9 +393,11 @@ select {
 }
 label,
 label.title {
-    font-weight: 700;
+    @include regular;
+    @include upper;
     @include source-sans;
-    margin-bottom: 16px;
+    font-size: 14px;
+    margin-bottom: 14px;
 }
 .input-group>.form-control[type=checkbox],
 input[type=checkbox]{
@@ -1621,8 +1629,9 @@ div.asp_r.asp_r_1.vertical{
         display: table;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 20px;
         //border-bottom: 1px solid $primary;
-        padding-bottom: 10px;
+        //padding-bottom: 10px;
         //min-width: 210px;
     }
     .btn_sm {
@@ -2120,7 +2129,7 @@ div.asp_r.asp_r_1.vertical{
 }
 
 .main_wrapper {
-    padding-top: 108px;
+    //padding-top: 108px;
     p {
         margin-bottom: 24px;
     }
@@ -2153,8 +2162,20 @@ div.asp_r.asp_r_1.vertical{
 }
 
 .main_breadcrumb {
-    padding-top: 13px;
+    padding-top: 14px;
+    font-size: 14px;
+    @include semi;
     @include source-sans;
+    @include upper;
+    background: $primary;
+    .container{
+        max-width: 100%;
+    }
+    nav{
+        @media (min-width: 1199px) {
+            padding-left: 120px;
+        }
+    }
     .breadcrumb {
         background: none;
         margin: 0px;
@@ -2165,16 +2186,19 @@ div.asp_r.asp_r_1.vertical{
         align-items: center;
         a {
             font-size: 14px;
-            color: $black;
-            @include semi;
+            color: $jacarta;
+            @include regular;
             text-decoration: none;
         }
         li.active {
-            color: $black;
-            @include regular;
+            color: $jacarta;
+            @include semi;
             font-size: 14px;
             text-decoration: none;
             line-height: 24px;
+            &::before{
+                margin-top: 7px;
+            }
         }
         img {
             vertical-align: unset;
@@ -2190,16 +2214,16 @@ div.asp_r.asp_r_1.vertical{
         margin-left: 8px;
         padding-right: 0;
         padding-left: 0;
-        width: 10px;
+        width: 7px;
     }
     .breadcrumb-item+.breadcrumb-item {
-        padding-left: 3px;
+        padding-left: 0;
     }
     //.container {}
 }
 
 .page_title {
-    padding-top: 16px;
+    padding-top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2208,10 +2232,14 @@ div.asp_r.asp_r_1.vertical{
     position: relative;
     padding-left: 10px;
     padding-right: 10px;
+    &.main_title{
+        background: $primary;
+    }
     h1 {
-        position: relative;
         z-index: 9;
+        color: $black;
         display: table;
+        position: relative;
         margin-bottom: 16px;
         line-height: normal;
     }
@@ -3065,32 +3093,58 @@ h2+.expand_img_grid {
 /*================================= 404 Page Start =======================================*/
 
 .no-found-wraper {
-    padding: 100px 0 50px;
+    padding: 8px 0 60px;
     position: relative;
     >div {
         position: relative;
     }
+    .no-found-imgIcon{
+        margin: 0 auto;
+    }
     .no-found-info {
-        gap: 60px;
-        h1 {
-            color: $black;
-            font-size: 200px;
-            line-height: 135px;
-            margin-bottom: 30px;
+        gap: 40px;
+        flex-direction: column;
+        @media (max-width: 500px) {
+            gap: 0px;
         }
         h2 {
-            color: $black;
-            font-size: 50px;
-            margin-top: 20px;
-            line-height: 64px;
-            margin-bottom: 25px;
+            color: $jacarta;
+            font-size: 200px;
+            line-height: 200px;
+            margin-bottom: 0px;
+            @media (max-width: 768px) {
+                font-size: 120px;
+                line-height: normal;
+            }
+            @media (max-width: 500px) {
+                line-height: 120px;
+            }
+        }
+        h1 {
+            color: #030504;
+            line-height: 50px;
+            margin-bottom: 0px;
+            @media (max-width: 768px) {
+                font-size: 30px;
+            }
         }
         h4 {
-            margin-bottom: 20px;
+            margin-bottom: 6px;
+            line-height: 25px;
+            letter-spacing: 0.01em;
+            @media (max-width: 768px) {
+                font-size: 16px;
+                line-height: normal;
+            }
         }
         .search_box {
-            max-width: 500px;
+            //max-width: 500px;
             text-align: center;
+            gap: 40px;
+            @media (max-width: 500px) {
+                gap: 0px;
+                flex-direction: column
+            }
             form {
                 max-width: 280px;
                 margin: 40px auto;
@@ -3132,17 +3186,12 @@ h2+.expand_img_grid {
                 }
             }
         }
-        .btn_normal {
-            height: 50px;
-            padding-top: 0;
-            font-size: 18px;
-            padding-bottom: 0;
-            line-height: 50px;
-            border-radius: 6px;
+        .btn_sm {
+            margin-top: 15px;
         }
     }
 }
-
+/*
 @media (max-width: 991.98px) {
     .no-found-wraper{
         padding-top: 50px;
@@ -3204,24 +3253,19 @@ h2+.expand_img_grid {
         align-items: center;
         flex-direction: column;
     }
-}
+}*/
 
 /*================================= 404 Page End =======================================*/
 
 /* result page start */
-
-.page_title.resut_title {
-    //padding-top: 100px;
-    padding-bottom: 20px;
-}
 
 .main_search_content {
     display: flex;
     justify-content: center;
     align-items: center;
     //background: $tertiary;
-    padding: 45px 15px 40px 15px;
-    .h6 {
+    padding: 40px 15px 40px 15px;
+    .h4 {
         margin-right: 20px;
         margin-bottom: 0px;
     }
@@ -3350,14 +3394,14 @@ h2+.expand_img_grid {
 }
 
 .resultmain {
-    background: #F2F1F2;
+    background: $secondary;
     padding: 0px 0px 0px 0px;
 }
 
 .rslt_txt {
     margin: auto;
     margin-top: 0px;
-    padding: 00px 0px 60px 0px;
+    padding: 00px 0px 50px 0px;
     .container {
         max-width: 810px;
     }
@@ -3367,7 +3411,7 @@ h2+.expand_img_grid {
 }
 
 .acc__card {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .acc__title {
@@ -3410,7 +3454,10 @@ h2+.expand_img_grid {
 .acc__panel {
     border-top: 0;
     display: none;
-    padding: 16px;
+    padding: 24px 16px 16px;
+    p:last-child{
+        margin-bottom: 0;
+    }
 }
 
 .resultWraper .searchFilterBlock {
@@ -3435,9 +3482,13 @@ h2+.expand_img_grid {
     position: relative;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     .rsltBody {
+        background: $white;
         padding: 15px 20px 20px 20px;
         p{
             margin-bottom: 10px;
+            &:last-child{
+                margin-bottom: 0;
+            }
         }
     }
     .re_category {
@@ -3464,7 +3515,7 @@ h2+.expand_img_grid {
 }
 
 .resull_filter {
-    padding: 40px 0px 70px 0px;
+    padding: 40px 0px;
 }
 
 .pagination {
@@ -3477,7 +3528,10 @@ h2+.expand_img_grid {
 }
 
 .sort_boxResult select {
-    min-width: 270px;
+    min-width: 217px;
+    min-height: 40px;
+    border-radius: 5px;
+    background-position: top 10px right 12px;
     //result end
 }
 
@@ -3615,7 +3669,8 @@ p.news_category {
         height: 100%;
     }
     &:hover {
-        h4 {
+        outline: solid 1px $tertiary;
+        h3 {
             text-decoration: underline;
         }
         a {
