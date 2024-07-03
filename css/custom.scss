@@ -143,7 +143,7 @@ h4, .h4 {
 }
 h5, .h5 {
     font-size: 16px;
-    color: $secondary;
+    color: $tertiary;
     line-height: normal;
     font-family: $source-sans;
 }
@@ -253,7 +253,7 @@ strong {
     &:hover {
         color: $white;
         text-decoration: none;
-        background: $secondary;
+        background: $tertiary;
         //img {}
     }
     img {
@@ -264,7 +264,7 @@ strong {
     }
 }
 .gform_button{
-    color: $secondary;
+    color: $tertiary;
     background: $white;
     &:hover{
         color: $white;
@@ -290,7 +290,7 @@ strong {
     &:hover {
         text-decoration: none;
         color: $white !important;
-        background: $secondary !important;
+        background: $tertiary !important;
     }
     img {
         margin-right: 10px;
@@ -369,7 +369,7 @@ select {
         color: #000;
         border-radius: 5px !important;
         &:focus{
-            border: solid 1px $secondary !important;
+            border: solid 1px $tertiary !important;
         }
     }
         ::-webkit-input-placeholder {
@@ -436,11 +436,12 @@ input[type=checkbox]{
     &.home-header{
         //background: transparent;
         .navbar-brand img{
-            max-width: 278px;
+            max-width: 171px;
+            margin-right: 0;
         }
     }
     &.shrink{
-        background: $secondary;
+        //background: $tertiary;
         .navbar-brand img{
             max-width: 209px;
             transition: all 0.3s ease-in-out;
@@ -452,6 +453,13 @@ input[type=checkbox]{
     }
     .navbar {
         padding: 0px;
+    }
+    .logo_wrap{
+        @media (min-width:1199px) {
+            position: absolute;
+            left: 120px;
+            top: 6px;
+        }
     }
     .navbar-brand {
         display: flex;
@@ -479,8 +487,15 @@ input[type=checkbox]{
     }
     .top_header_cont {
         margin-left: auto;
-        z-index: 9;
-        padding-top: 6px;
+        //z-index: 9;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background: $jacarta;
+        width: 100%;
+        @media (max-width:1199px) {
+            padding-top: 18px;
+            padding-bottom: 14px;
+        }
     }
     .navbar {
         ul {
@@ -496,6 +511,7 @@ input[type=checkbox]{
                 border-left: 5px solid transparent;
                 border-right: 5px solid transparent;
                 border-bottom: 5px solid $white;
+                display: none;
             }
             .mega-indicator{
                 display: none !important;
@@ -504,6 +520,9 @@ input[type=checkbox]{
         .container-fluid,
         .container {
             align-items: center;
+        }
+        .container-fluid {
+            padding: 0
         }
     }
     .social_media {
@@ -538,6 +557,9 @@ input[type=checkbox]{
     .top_menu {
         @include flex;
         align-items: center;
+        justify-content: end;
+        max-width: 1200px;
+        margin: 0 auto;
         .top_inner_menu {
             @include flex;
             align-items: center;
@@ -546,18 +568,35 @@ input[type=checkbox]{
             padding-left: 20px;
             li {
                 a{
-                    border-right: solid 1px $white;
+                    //border-right: solid 1px $white;
                 }
                 &:last-child a{
                     border-right: none;
+                }
+                select{
+                    background: transparent;
+                    color: $white;
+                    border: none;
+                    min-width: fit-content;
+                    min-height: auto;
+                    cursor: pointer;
+                    &:focus{
+                        border: none;
+                        outline: none;
+                        box-shadow: none;
+                    }
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
             a {
                 color: $white;
                 font-size: 16px;
-                padding: 0px 10px;
+                margin-right: 50px;
                 font-weight: normal;
                 position: relative;
+                display: block;
             }
             a:hover {
                 text-decoration: underline;
@@ -678,7 +717,7 @@ input[type=checkbox]{
         }
     }
     .nav_bottom {
-        margin-top: 30px;
+        //margin-top: 30px;
         margin-right: auto;
         margin-left: auto;
     }
@@ -692,12 +731,13 @@ input[type=checkbox]{
             >a {
                 @include source-sans;
                 font-size: 20px;
-                padding: 0px 0px 20px 0px !important;
+                margin-top: 18px;
+                padding: 0px 0px 16px 0px !important;
                 text-align: center;
                 @include all;
                 line-height: 24px;
                 position: relative;
-                color: $white !important;
+                color: #010110 !important;
             }
             @include xl {
                 &:hover {
@@ -910,7 +950,7 @@ div.asp_r.asp_r_1.vertical{
         li {
             margin-bottom: 5px;
             a {
-                background: $secondary;
+                background: $tertiary;
                 padding: 5px 6px;
                 width: 72px;
                 color: #000102;
@@ -1076,7 +1116,7 @@ div.asp_r.asp_r_1.vertical{
             text-align: center;
             &:hover {
                 color: $white;
-                background: $secondary;
+                background: $tertiary;
             }
             &.active {
                 color: $black;
@@ -1370,7 +1410,7 @@ div.asp_r.asp_r_1.vertical{
         text-align: center;
         &:hover {
             .navblock_icon{
-                background: $secondary;
+                background: $tertiary;
             }
             h5{
                 @include underline;
@@ -1543,7 +1583,7 @@ div.asp_r.asp_r_1.vertical{
     }
     .mt-category {
         color: $black;
-        background: $secondary;
+        background: $tertiary;
         font-weight: normal;
         min-width: 160px;
         text-align: center;
@@ -1711,7 +1751,7 @@ div.asp_r.asp_r_1.vertical{
                 border-radius: 100px;
                 background: #D4D3D5;
                 &.active {
-                    background: $secondary;
+                    background: $tertiary;
                 }
             }
         }
@@ -1728,7 +1768,7 @@ div.asp_r.asp_r_1.vertical{
             top: auto;
             bottom: auto;
             &:hover{
-                background: $secondary;
+                background: $tertiary;
             }
         }
         .carousel-control-prev img{
@@ -1977,7 +2017,7 @@ div.asp_r.asp_r_1.vertical{
                 //filter: brightness(0) saturate(100%) invert(0%) sepia(50%) saturate(1460%) hue-rotate(114deg) brightness(90%) contrast(105%);
             }
             &:hover {
-                background: $secondary;
+                background: $tertiary;
                 img {
                     filter: none;
                 }
@@ -2199,7 +2239,7 @@ div.asp_r.asp_r_1.vertical{
     .date {
         font-size: 16px;
         font-weight: 400;
-        color: $secondary;
+        color: $tertiary;
         margin-bottom: 24px;
     }
     .document_era {
@@ -2264,7 +2304,7 @@ div.asp_r.asp_r_1.vertical{
     font-size: 16px;
     font-weight: 700;
     @include source-sans;
-    color: $secondary;
+    color: $tertiary;
     margin-bottom: 3px;
     display: inline-block;
     img {
@@ -2275,7 +2315,7 @@ div.asp_r.asp_r_1.vertical{
         width: fit-content;
         font-weight: 500;
         color: $white;
-        background: $secondary;
+        background: $tertiary;
         display: inline-block;
     }
 }
@@ -2581,7 +2621,7 @@ button.close{
         @include source-sans;
         &:hover {
             color: $white;
-            background-color: $secondary;
+            background-color: $tertiary;
             text-decoration: none;
             border: 0;
         }
@@ -2602,7 +2642,7 @@ button.close{
 }
 
 .button_ico_box {
-    background: $secondary;
+    background: $tertiary;
     text-align: center;
     padding: 25px 20px;
     border-radius: 0px;
@@ -2672,11 +2712,11 @@ button.close{
             align-items: center;
             margin-right: 16px;
             background: transparent;
-            color: $secondary;
+            color: $tertiary;
             font-weight: 700;
             font-size: 24px;
             @include source-sans;
-            border: 3px solid $secondary;
+            border: 3px solid $tertiary;
         }
         //.how_title {}
         p.how_title {
@@ -2868,7 +2908,7 @@ h2+.expand_img_grid {
                 text-decoration: underline;
             }*/
             .plus-minus_icon {
-                background: $secondary;
+                background: $tertiary;
                 img{
                     filter: brightness(0) invert(1);
                 }
@@ -2909,7 +2949,7 @@ h2+.expand_img_grid {
             }
             .active {
                 .plus-minus_icon {
-                    background: $secondary;
+                    background: $tertiary;
                     img {
                         @include rotate;
                         filter: brightness(0) invert(1);
@@ -2949,7 +2989,7 @@ h2+.expand_img_grid {
         width: 100%;
         margin-top: 0px;
         box-shadow: none;
-        //background: $secondary;
+        //background: $tertiary;
     }
     .expanding-container.expanded,
     .expanding-grid .expanding-container:target {
@@ -3056,7 +3096,7 @@ h2+.expand_img_grid {
                 margin: 40px auto;
                 .input-group:hover{
                     .btn {
-                        background: $secondary !important;
+                        background: $tertiary !important;
                         img{
                             filter: none;
                         }
@@ -3074,7 +3114,7 @@ h2+.expand_img_grid {
                 box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
                 &:focus{
                     z-index: auto;
-                    border: solid 1px $secondary !important;
+                    border: solid 1px $tertiary !important;
                 }
             }
             .btn {
@@ -3179,7 +3219,7 @@ h2+.expand_img_grid {
     display: flex;
     justify-content: center;
     align-items: center;
-    //background: $secondary;
+    //background: $tertiary;
     padding: 45px 15px 40px 15px;
     .h6 {
         margin-right: 20px;
@@ -3223,7 +3263,7 @@ h2+.expand_img_grid {
             overflow: visible !important;
             height: auto;
             &:focus .promagnifier{
-                background: $secondary !important;
+                background: $tertiary !important;
             }
         }
         .asp_main_container {
@@ -3237,7 +3277,7 @@ h2+.expand_img_grid {
             box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25) !important;
             &:hover{
                 .promagnifier {
-                    background: $secondary !important;
+                    background: $tertiary !important;
                 }
                 .innericon {
                     background-image: url(../img/search-icon-over.svg) !important;
@@ -3262,7 +3302,7 @@ h2+.expand_img_grid {
             border-bottom: 0!important;
             font-weight: normal !important;
             &:focus{
-                border: solid 1px $secondary !important;
+                border: solid 1px $tertiary !important;
             }
         }
         ::-webkit-input-placeholder {
@@ -3344,7 +3384,7 @@ h2+.expand_img_grid {
     border: 1px solid transparent;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     &:hover {
-        border: 1px solid $secondary;
+        border: 1px solid $tertiary;
     }
     h6 {
         margin: 0px;
@@ -3388,7 +3428,7 @@ h2+.expand_img_grid {
 }
 
 .result_row {
-    //background: $secondary;
+    //background: $tertiary;
     border: 0;
     margin-bottom: 24px;
     border-radius: 0px;
@@ -3559,10 +3599,10 @@ p.news_category {
     height: 100%;
     box-shadow: none;
     position: relative;
-    //background: $secondary;
+    //background: $tertiary;
     .news_date {
         @include bold;
-        color: $secondary;
+        color: $tertiary;
         margin-bottom: 3px;
     }
     h5{
@@ -3583,7 +3623,7 @@ p.news_category {
         }
     }
     .newsinfo{
-        //border-top: solid 3px $secondary;
+        //border-top: solid 3px $tertiary;
         height: calc(100% - 195px);
         padding: 12px 16px 16px;
         background: $white;
@@ -3635,7 +3675,7 @@ p.news_category {
         background: $black;
         &:hover {
             color: $white;
-            background: $secondary;
+            background: $tertiary;
         }
     }
     .gform_wrapper{
@@ -3782,7 +3822,7 @@ p.news_category {
         }
     }
     .cont-btns {
-        //background: $secondary;
+        //background: $tertiary;
         padding: 15px;
         p {
             text-align: center;
@@ -3887,7 +3927,7 @@ p.news_category {
     }
 }
 
-.wp-block-group:not(.gray, .blue, .grey, .lightgreen, .green, .has-secondary-background-color)+.wp-block-group:not(.gray, .blue, .grey, .lightgreen, .green, .has-secondary-background-color) {
+.wp-block-group:not(.gray, .blue, .grey, .lightgreen, .green, .has-tertiary-background-color)+.wp-block-group:not(.gray, .blue, .grey, .lightgreen, .green, .has-tertiary-background-color) {
     padding-top: 0px;
 }
 
@@ -4131,7 +4171,7 @@ div.advgb-tab-body>iframe {
     input:focus,
     select:focus,
     textarea:focus {
-        border: 1px solid $secondary !important;
+        border: 1px solid $tertiary !important;
         outline: 0 !important;
     }
 }
@@ -4306,7 +4346,7 @@ body .is-layout-constrained>.wp-block-group {
     flex-wrap: wrap;
 }
 
-.interface-interface-skeleton__notices .components-snackbar__action.components-button:not(:disabled):not([aria-disabled="true"]):not(.is-secondary) {
+.interface-interface-skeleton__notices .components-snackbar__action.components-button:not(:disabled):not([aria-disabled="true"]):not(.is-tertiary) {
     color: $white !important;
     text-decoration: underline !important;
 }
@@ -4340,7 +4380,7 @@ body .is-layout-constrained>.wp-block-group {
         padding-right: 40px !important;
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25) !important;
         &:hover {
-            outline: 1px solid $secondary;
+            outline: 1px solid $tertiary;
             /*.advgb-accordion-header-title {}
             .advgb-accordion-header-icon {
                 img {}
@@ -4422,7 +4462,7 @@ body .is-layout-constrained>.wp-block-group {
         border-right: 0px !important;
     }
     th {
-        background: $secondary;
+        background: $tertiary;
         text-transform: none;
         color: $white;
         border-top: 0 !important;
@@ -4517,7 +4557,7 @@ body .is-layout-constrained>.wp-block-group {
                 }
             }
             &:hover {
-                background: $secondary !important;
+                background: $tertiary !important;
                 a {
                     color: $white !important;
                     p {
@@ -4653,7 +4693,7 @@ body .is-layout-constrained>.wp-block-group {
         font-size: 20px !important;
         min-height: 55px;
         a {
-            color: $secondary;
+            color: $tertiary;
             font-weight: 600 !important;
             @include source-sans;
             text-decoration: none;
@@ -4665,7 +4705,7 @@ body .is-layout-constrained>.wp-block-group {
             color: $primary;
             &:hover {
                 text-decoration: underline !important;
-                color: $secondary;
+                color: $tertiary;
             }
         }
     }
@@ -4679,7 +4719,7 @@ body .is-layout-constrained>.wp-block-group {
             outline: 1px solid #68C7EF;
             h2 {
                 a {
-                    color: $secondary;
+                    color: $tertiary;
                     text-decoration: none;
                 }
             }
@@ -4694,7 +4734,7 @@ body .is-layout-constrained>.wp-block-group {
         .advgb-post-datetime {
             text-transform: uppercase;
             margin-left: -96px;
-            color: $secondary !important;
+            color: $tertiary !important;
             font-size: 15px;
             font-weight: 700;
         }
@@ -4961,7 +5001,7 @@ body .is-layout-constrained>.wp-block-group {
                 min-width: 282px;
                 padding-top: 12px;
                 padding-bottom: 11px;
-                background: $secondary;
+                background: $tertiary;
                 &:hover{
                     background: $black;
                 }
@@ -5042,7 +5082,7 @@ body .is-layout-constrained>.wp-block-group {
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
         &:hover{
             .btn {
-                background: $secondary !important;
+                background: $tertiary !important;
                 img{
                     filter: none;
                 }
@@ -5082,7 +5122,7 @@ body .is-layout-constrained>.wp-block-group {
                 width: 100%;
                 padding-top: 12px;
                 padding-bottom: 11px;
-                background: $secondary;
+                background: $tertiary;
                 &:hover{
                     background: $black;
                 }
@@ -5156,7 +5196,7 @@ body .is-layout-constrained>.wp-block-group {
 .checkbox-custom:checked+.checkbox-custom-label:before {
     content: "";
     display: inline-block;
-    background: $secondary;
+    background: $tertiary;
 }
 
 .route-info-wrap {
@@ -5254,7 +5294,7 @@ body .is-layout-constrained>.wp-block-group {
         min-height: 18px;
         border-radius: 100px;
         margin-right: 8px;
-        background: $secondary;
+        background: $tertiary;
     }
     .alerticon {
         width: 30px;
@@ -5347,7 +5387,7 @@ body .is-layout-constrained>.wp-block-group {
 .accoRtpanel {
     display: none;
     padding: 24px;
-    //background: $secondary;
+    //background: $tertiary;
     .btn_sm:not(.doc_block) {
         margin-bottom: 20px;
     }
@@ -5358,7 +5398,7 @@ body .is-layout-constrained>.wp-block-group {
         &.btn_sm{
             padding-top: 12px;
             padding-bottom: 11px;
-            background: $secondary;
+            background: $tertiary;
             &:hover{
                 background: $black;
             }
@@ -5400,7 +5440,7 @@ body .is-layout-constrained>.wp-block-group {
         .doc_block {
             &.btn_sm{
                 width: 100%;
-                background: $secondary;
+                background: $tertiary;
                 padding-top: 12px;
                 padding-bottom: 11px;
                 &:hover{
@@ -5422,7 +5462,7 @@ body .is-layout-constrained>.wp-block-group {
 
 .generic_form-news {
     padding: 32px;
-    background: $secondary;
+    background: $tertiary;
     h4,
     p,
     p a {
@@ -5439,12 +5479,12 @@ body .is-layout-constrained>.wp-block-group {
         @include semi;
         margin-top: 20px;
         background: $white;
-        color: $secondary;
+        color: $tertiary;
         padding: 10px 32px;
         border: 5px solid transparent;
         &:hover{
             color: $white;
-            background: $secondary;
+            background: $tertiary;
             border: 5px solid $white;
         }
     }
@@ -5480,7 +5520,7 @@ body .is-layout-constrained>.wp-block-group {
             padding: 14px 10px 15px;
             border-radius: 0px;
             &:hover{
-                background: $secondary;
+                background: $tertiary;
             }
             &.active {
                 color: $black;
@@ -5502,7 +5542,7 @@ body .is-layout-constrained>.wp-block-group {
         width: 23px;
         height: 23px;
         border-radius: 100px;
-        background: $secondary;
+        background: $tertiary;
         margin-right: 15px;
     }
     h3 {
@@ -5563,7 +5603,7 @@ body .is-layout-constrained>.wp-block-group {
 }
 
 .stTitle {
-    //background: $secondary;
+    //background: $tertiary;
     padding: 0;
     padding-right: 40px;
     position: relative;
@@ -5610,7 +5650,7 @@ body .is-layout-constrained>.wp-block-group {
 .accostpanel {
     display: none;
     padding: 40px 24px 24px;
-    //background: $secondary;
+    //background: $tertiary;
     table {
         tr{
             background: #FAF9FA;
@@ -5673,7 +5713,7 @@ body .is-layout-constrained>.wp-block-group {
         text-align: center;
         a {
             font-weight: 700;
-            color: $secondary;
+            color: $tertiary;
             @include source-sans;
         }
     }
@@ -5866,7 +5906,7 @@ body .is-layout-constrained>.wp-block-group {
     .modal-alert-info {
         padding: 25px 25px;
         position: relative;
-        //background: $secondary;
+        //background: $tertiary;
         .close {
             position: absolute;
             right: 5px;
@@ -5948,7 +5988,7 @@ body .is-layout-constrained>.wp-block-group {
     padding: 24px;
     max-width: 270px;
     min-width: 270px;
-    background: $secondary;
+    background: $tertiary;
     @media (max-width: 768px) {
         padding: 24px 40px;
         max-width: 100%;
@@ -6056,7 +6096,7 @@ body .is-layout-constrained>.wp-block-group {
     padding-top: 0px;
     .accordion_bk {
         margin-bottom: 15px;
-        //background: $secondary;
+        //background: $tertiary;
     }
     .main_acco_sv {
         border: 0;
@@ -6194,7 +6234,7 @@ body .is-layout-constrained>.wp-block-group {
         list-style: none;
         padding: 0px;
         li {
-            //background: $secondary;
+            //background: $tertiary;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -6286,7 +6326,7 @@ body .is-layout-constrained>.wp-block-group {
     border: 0;
     display: flex;
     position: relative;
-    //background: $secondary;
+    //background: $tertiary;
     align-items: center;
     .date_meet{
         @include all;
@@ -6294,7 +6334,7 @@ body .is-layout-constrained>.wp-block-group {
         min-height: 110px;
         text-align: center;
         flex-direction: column;
-        background: $secondary;
+        background: $tertiary;
         h4{
             color: $white;
             margin-bottom: 0;
@@ -6312,7 +6352,7 @@ body .is-layout-constrained>.wp-block-group {
         padding: 10px 25px;
         padding-right: 45px;
         span.category {
-            color: $secondary;
+            color: $tertiary;
             font-weight: 600;
             font-size: 15px;
             margin-bottom: 4px;
@@ -6368,7 +6408,7 @@ body .is-layout-constrained>.wp-block-group {
 .acco_panel {
     padding: 32px 16px 0;
     display: none;
-    //background: $secondary;
+    //background: $tertiary;
     .btn_sm {
         min-width: 282px;
         margin-bottom: 20px;
@@ -6390,7 +6430,7 @@ body .is-layout-constrained>.wp-block-group {
         color: $black;
         text-transform: none;
         &:hover{
-            color: $secondary;
+            color: $tertiary;
         }
     }
 }
@@ -6478,7 +6518,7 @@ body .is-layout-constrained>.wp-block-group {
 }
 
 .acccard {
-    //background: $secondary;
+    //background: $tertiary;
     margin-bottom: 15px;
     .acctitle {
         padding: 20px;
@@ -6552,7 +6592,7 @@ body .is-layout-constrained>.wp-block-group {
 /*================================= goform general Start =======================================*/
 .gen_form_wrapper,
 .gform_wrapper{
-    background: $secondary;
+    background: $tertiary;
     padding: 64px 72px 40px;
     .gform_heading{
         display: none;
@@ -6649,10 +6689,10 @@ body .is-layout-constrained>.wp-block-group {
         padding: 0;
     }
     span.current {
-        border-bottom: 1px solid $secondary;
+        border-bottom: 1px solid $tertiary;
         position: relative;
         top: 1px;
-        color: $secondary;
+        color: $tertiary;
     }
     a:hover {
         font-weight: 700;
@@ -6670,7 +6710,7 @@ body .is-layout-constrained>.wp-block-group {
         border-radius: 50px;
         background-color: $black;
         &:hover{
-            background-color: $secondary;
+            background-color: $tertiary;
         }
         &::after {
             content: 'NEXT';
@@ -6695,7 +6735,7 @@ body .is-layout-constrained>.wp-block-group {
         border-radius: 50px;
         background-color: $black;
         &:hover{
-            background-color: $secondary;
+            background-color: $tertiary;
         }
         &:after {
             content: 'PREV';
@@ -6728,7 +6768,7 @@ body .is-layout-constrained>.wp-block-group {
     text-transform: uppercase;
     a {
         font-size: 14px;
-        color: $secondary;
+        color: $tertiary;
         font-weight: normal;
     }
     >div,
@@ -6798,7 +6838,7 @@ body .is-layout-constrained>.wp-block-group {
     z-index: 9;
     margin-bottom: 20px;
     a {
-        color: $secondary;
+        color: $tertiary;
         @include bold;
         @include source-sans;
         text-transform: none;
