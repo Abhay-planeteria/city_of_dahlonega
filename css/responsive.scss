@@ -419,8 +419,8 @@
         font-size: 6px;
     }
     .main_banner .carousel-item img {
-        height: 590px;
-        object-fit: cover;
+        //height: 590px;
+        //object-fit: cover;
     }
     .topTitle.text-left {
         text-align: center !important;
@@ -460,6 +460,11 @@
         margin-left: 0;
         margin-top: 10px;
         width: 100% !important;
+        &:last-child{
+            label, label.title{
+                display: none;
+            }
+        }
     }
     .search_box {
         width: 100%;
@@ -527,10 +532,10 @@
     }
     .filterWrap form {
         max-width: 100%;
-        grid-template-columns: 1fr 160px 130px;
+        grid-template-columns: 280px 160px 160px;
     }
     .search_filter_title .filter_box {
-        margin-right: 4px !important;
+        //margin-right: 4px !important;
     }
     /*.routRow {
         .leftColumn {}
@@ -570,7 +575,7 @@
 
 @media (min-width:768px) and (max-width:1200px) {
     .main_banner .carousel-item img {
-        min-height: 500px;
+        //min-height: 500px;
     }
     .main_banner .carousel-caption img{
         min-height: fit-content;
@@ -584,13 +589,17 @@
         //bottom: 270px;
     }
 }
-@media (min-width:768px) and (max-width:992px) {
+@media (min-width:768px) and (max-width:882px) {
     .newsInRow {
-        .col-md-9,
+        .nsleft,
         .nsRight {
             -ms-flex: 0 0 100%;
             flex: 0 0 100%;
             max-width: 100%;
+        }
+        .nsRight .newsSort{
+            margin-top: 8px;
+            margin-left: 0;
         }
     }
 }

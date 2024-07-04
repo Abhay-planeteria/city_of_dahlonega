@@ -378,7 +378,7 @@ select:focus {
 }
 .search-box .form-control {
   color: #000;
-  border-radius: 5px !important;
+  border-radius: 0px !important;
 }
 .search-box .form-control:focus {
   border: solid 1px #555582 !important;
@@ -402,7 +402,8 @@ label.title {
   text-transform: uppercase;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
-  margin-bottom: 14px;
+  line-height: 150%;
+  margin-bottom: 8px;
 }
 
 .input-group > .form-control[type=checkbox],
@@ -999,6 +1000,10 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
 }
 .main_banner .carousel-item img {
   width: 100%;
+  max-height: calc(100vh - 150px);
+  min-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main_banner .carousel-caption {
   right: auto;
@@ -3026,40 +3031,42 @@ h2 + .expand_img_grid {
     gap: 0px;
   }
 }
-.no-found-wraper .no-found-info h2 {
+.no-found-wraper .no-found-info h1 {
   color: #333354;
   font-size: 200px;
   line-height: 200px;
   margin-bottom: 0px;
 }
 @media (max-width: 768px) {
-  .no-found-wraper .no-found-info h2 {
+  .no-found-wraper .no-found-info h1 {
     font-size: 120px;
     line-height: normal;
   }
 }
 @media (max-width: 500px) {
-  .no-found-wraper .no-found-info h2 {
+  .no-found-wraper .no-found-info h1 {
     line-height: 120px;
   }
 }
-.no-found-wraper .no-found-info h1 {
+.no-found-wraper .no-found-info h2 {
+  font-size: 40px;
   color: #030504;
   line-height: 50px;
   margin-bottom: 0px;
 }
 @media (max-width: 768px) {
-  .no-found-wraper .no-found-info h1 {
+  .no-found-wraper .no-found-info h2 {
     font-size: 30px;
   }
 }
-.no-found-wraper .no-found-info h4 {
+.no-found-wraper .no-found-info h3 {
+  font-size: 18px;
   margin-bottom: 6px;
   line-height: 25px;
   letter-spacing: 0.01em;
 }
 @media (max-width: 768px) {
-  .no-found-wraper .no-found-info h4 {
+  .no-found-wraper .no-found-info h3 {
     font-size: 16px;
     line-height: normal;
   }
@@ -3496,8 +3503,16 @@ h2 + .expand_img_grid {
 }
 
 /*================================= News Page Start =======================================*/
+.news_wraper {
+  padding-top: 32px;
+}
 .news_wraper .page_title {
-  padding-bottom: 30px;
+  padding-bottom: 16px;
+  justify-content: left;
+  padding-left: 0;
+}
+.news_wraper .page_title h2 {
+  margin-bottom: 0;
 }
 .news_wraper .container {
   max-width: 1200px;
@@ -3555,8 +3570,10 @@ p.news_category {
   color: #555582;
   margin-bottom: 3px;
 }
-.news_content h5 {
+.news_content .news_date {
   color: #333354;
+  font-weight: 700;
+  margin-bottom: 8px;
   line-height: 20px;
 }
 .news_content > a {
@@ -3578,6 +3595,11 @@ p.news_category {
   padding: 12px 16px 16px;
   background: #ffffff;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 767px) {
+  .news_content .newsinfo {
+    height: auto;
+  }
 }
 
 .newsBody p:last-child {
@@ -3638,8 +3660,6 @@ p.news_category {
   padding-bottom: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 .newsSearchEra .filterWrap {
   display: block !important;
@@ -3651,7 +3671,13 @@ p.news_category {
 }
 .filterWrap form {
   display: grid !important;
-  grid-template-columns: 280px 180px 180px;
+  grid-template-columns: 304px 300px 300px;
+}
+@media (max-width: 1199.98px) {
+  .filterWrap form {
+    max-width: 100%;
+    grid-template-columns: 280px 160px 160px;
+  }
 }
 .filterWrap .reset {
   margin-top: 15px;
@@ -3666,9 +3692,15 @@ p.news_category {
 .search_filter_title .search_input .input-group {
   max-width: 280px;
 }
+@media (max-width: 767px) {
+  .search_filter_title .search_input .input-group {
+    max-width: 100%;
+  }
+}
 
 .newsInRow {
-  margin-bottom: 40px;
+  justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 .nsRight {
@@ -3677,7 +3709,7 @@ p.news_category {
   justify-content: flex-end;
 }
 .nsRight .newsSort {
-  width: 220px;
+  width: 240px;
   margin-left: auto;
   margin-bottom: 0;
 }
@@ -4952,11 +4984,11 @@ body .is-layout-constrained > .wp-block-group {
 }
 
 .search-box {
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 .search-box .input-group {
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 0px;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 .search-box .input-group:hover .btn {
@@ -4970,7 +5002,7 @@ body .is-layout-constrained > .wp-block-group {
   right: 0px;
   background: none;
   height: 100%;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0px;
   z-index: 90;
   display: flex;
   align-items: center;
