@@ -2142,8 +2142,15 @@ div.asp_r.asp_r_1.vertical{
     }
     li {
         @include source-sans;
+        padding: 4px 0;
     }
     ol, ul{
+        margin-bottom: 24px;
+    }
+    p.date {
+        font-size: 16px;
+        @include bold;
+        color: $jacarta;
         margin-bottom: 24px;
     }
 }
@@ -2273,8 +2280,8 @@ div.asp_r.asp_r_1.vertical{
     padding-top: 0px;
     .date {
         font-size: 16px;
-        font-weight: 400;
-        color: $tertiary;
+        @include bold;
+        color: $jacarta;
         margin-bottom: 24px;
     }
     .document_era {
@@ -2289,7 +2296,7 @@ div.asp_r.asp_r_1.vertical{
     margin-top: 24px;
     margin-bottom: 24px;
     .caption-carousel {
-        padding-top: 15px;
+        padding-top: 0;
     }
     .carousel-control-prev {
         img {
@@ -2319,6 +2326,7 @@ div.asp_r.asp_r_1.vertical{
             object-fit: cover;
         }
         p{
+            font-weight: 300;
             text-align: center;
             margin-top: 8px;
         }
@@ -2337,9 +2345,10 @@ div.asp_r.asp_r_1.vertical{
 }
 .doc_block {
     font-size: 16px;
-    font-weight: 700;
+    @include bolder;
     @include source-sans;
-    color: $tertiary;
+    line-height: 150%;
+    color: $dark-slate-blue;
     margin-bottom: 3px;
     display: inline-block;
     img {
@@ -2352,6 +2361,9 @@ div.asp_r.asp_r_1.vertical{
         color: $white;
         background: $tertiary;
         display: inline-block;
+    }
+    &:hover img{
+        filter: brightness(0) saturate(100%) invert(18%) sepia(16%) saturate(1430%) hue-rotate(201deg) brightness(97%) contrast(91%);
     }
 }
 
@@ -2440,12 +2452,17 @@ div.asp_r.asp_r_1.vertical{
             border: 1px solid $primary;
             border-top: none;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+            h3{
+                font-size: 18px;
+                line-height: 25px;
+            }
             p{
-                margin-bottom: 16px;
+                margin-bottom: 0;
             }
         }
         &:hover {
-            h4 {
+            outline: solid 1px $tertiary;
+            h3 {
                 text-decoration: underline;
             }
         }
@@ -2524,8 +2541,9 @@ button.close{
 .img_button_row {
     justify-content: center;
     .img_btn_col {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-bottom: 16px;
     }
     .img_block {
         overflow: hidden;
@@ -2538,7 +2556,7 @@ button.close{
             }
         }
         //&:hover {}
-        .overlayBgColor{
+        .overlayBgColor {
             left: 0;
             top: 0;
             left: 0;
@@ -2548,7 +2566,7 @@ button.close{
             position: absolute;
             z-index: 1;
             display: none;
-            background-color: rgba(95, 36, 159, 0.75);
+            background: linear-gradient(0deg, rgba(51, 51, 84, 0.8), rgba(51, 51, 84, 0.8));
         }
         .img_block_descr {
             top: 0;
@@ -2576,8 +2594,9 @@ button.close{
             }
             h3 {
                 width: 100%;
-                bottom: 18px;
-                font-size: 20px;
+                bottom: 20px;
+                @include semi;
+                font-size: 18px;
                 margin: 0 auto;
                 padding: 0 15px;
                 position: absolute;
@@ -2589,19 +2608,19 @@ button.close{
                 display: flex;
                 justify-content: end;
                 flex-direction: column;
-                background: none;
-                h3{
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.5) 83%, rgba(0, 0, 0, 0.5) 100%);
+                h3 {
                     top: 0;
                     bottom: 0;
                     @include underline;
                     position: relative;
                     transform: translateY(0);
                 }
-                p{
+                p {
                     display: block;
                 }
             }
-            .overlayBgColor{
+            .overlayBgColor {
                 display: block;
                 transition: background-color 10s ease-in-out;
             }
@@ -2609,13 +2628,15 @@ button.close{
                 display: none;
             }
         }
+        &.no-content:hover h3{
+            top: -50%;
+            transform: translateY(50%);
+        }
     }
 }
-.main-services .img_button_row .img_block:hover .img_block_descr h3{
+
+.main-services .img_button_row .img_block:hover .img_block_descr h3 {
     top: auto;
-}
-.station-overview .img_button_row .img_block:hover .img_block_descr h3{
-    top: -25%;
 }
 
 /*================================= Button list Section Start =======================================*/
@@ -2646,12 +2667,12 @@ button.close{
         -ms-flex-align: center;
         align-items: center;
         padding: 10px;
-        background-color: $black;
+        background-color: $jacarta;
         border-radius: 5px;
         height: 100%;
         position: relative;
         border: 0;
-        font-weight: 500;
+        @include semi;
         transition: background-color 0.3s ease-in-out;
         @include source-sans;
         &:hover {
@@ -2710,7 +2731,7 @@ button.close{
 
 /*================================= How to Section Start =======================================*/
 .howto{
-    background: #FCFEFF;
+    background: $secondary;
     .container{
         max-width: 900px;
     }
@@ -2731,14 +2752,14 @@ button.close{
             text-transform: none;
         }
         .number {
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             border-radius: 100px;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            min-width: 48px;
-            min-height: 48px;
+            min-width: 50px;
+            min-height: 50px;
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center;
@@ -2746,12 +2767,11 @@ button.close{
             -ms-flex-align: center;
             align-items: center;
             margin-right: 16px;
-            background: transparent;
-            color: $tertiary;
-            font-weight: 700;
+            background: $jacarta;
+            color: $white;
             font-size: 24px;
+            @include semi;
             @include source-sans;
-            border: 3px solid $tertiary;
         }
         //.how_title {}
         p.how_title {
@@ -2772,7 +2792,7 @@ button.close{
 /*================================= Contact Card Section Start =======================================*/
 .contactcard_row {
     .contact_col {
-        padding: 0px 12px;
+        padding: 0px 8px;
         margin-bottom: 15px;
         display: flex;
         flex-direction: column;
@@ -2786,14 +2806,14 @@ button.close{
     }
     .contact_box {
         border: 0;
-        height: 100%;
+        //height: 100%;
         background: $white;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
         p {
             margin-bottom: 0;
         }
         h3 {
-            margin-bottom: 16px;
+            margin-bottom: 8px;
         }
         .cont_img {
             img {
@@ -2954,16 +2974,9 @@ h2+.expand_img_grid {
         padding: 16px 24px;
         text-align: left;
         background: $white;
-        h3 {
-            /*color: $black;
-            font-size: 18px;
-            margin-bottom: 3px;
-            font-weight: 700;*/
-        }
-        h4 {
-            /*text-decoration: none;
-            font-size: 16px;
-            font-weight: normal;*/
+        span.h4 {
+            display: block;
+            margin-bottom: 4px;
         }
     }
     .links {
@@ -3062,12 +3075,12 @@ h2+.expand_img_grid {
     }
     .expand-content {
         //margin: 0 auto;
-        margin: 3px 7px 7px;
-        padding: 48px 200px;
+        margin: 3px 7px 16px;
+        padding: 32px 200px;
         background: $white;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
         @media (max-width: 992px) {
-            padding: 40px;
+            padding: 30px;
         }
         .phone_email{
             margin-bottom: 10px;
@@ -3669,11 +3682,6 @@ p.news_category {
     box-shadow: none;
     position: relative;
     //background: $tertiary;
-    .news_date {
-        @include bold;
-        color: $tertiary;
-        margin-bottom: 3px;
-    }
     .news_date{
         color: $jacarta;
         @include bold;
@@ -3827,16 +3835,41 @@ p.news_category {
 
 /*================================= News Details Page Start =======================================*/
 .news_detail {
-    padding-top: 24px;
+    padding-top: 40px;
     padding-bottom: 50px;
-    background-color: $primary;
-    .news_content .newsinfo{
-        border: none;
+    .news_content{
+        &:hover{
+            outline: none;
+            h3{
+                text-decoration: none;
+            }
+        }
+        .newsinfo{
+            padding: 0;
+            border: none;
+            background: transparent;
+            box-shadow: none;
+            h3{
+                font-size: 24px;
+            }
+            .news_date{
+                display: block;
+                margin-bottom: 24px;
+            }
+            .quotePara{
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
     }
     .page_title {
         padding-bottom: 30px;
     }
     .container {
+        @media (min-width: 900px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
         max-width: 900px;
     }
     .news-dt-img {
@@ -7274,7 +7307,6 @@ legend.gform-field-label {
     width: 100%;
 }
 
-.station-overview{
-    padding-top: 26px;
-    padding-bottom: 50px;
+.department_overview{
+    padding: 56px 0 84px;
 }

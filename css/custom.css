@@ -2130,8 +2130,15 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
 }
 .main_wrapper li {
   font-family: "Source Sans Pro", sans-serif;
+  padding: 4px 0;
 }
 .main_wrapper ol, .main_wrapper ul {
+  margin-bottom: 24px;
+}
+.main_wrapper p.date {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333354;
   margin-bottom: 24px;
 }
 
@@ -2263,8 +2270,8 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
 }
 .generic_middle_block .date {
   font-size: 16px;
-  font-weight: 400;
-  color: #555582;
+  font-weight: 700;
+  color: #333354;
   margin-bottom: 24px;
 }
 .generic_middle_block .document_era .col-md-12 {
@@ -2277,7 +2284,7 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
   margin-bottom: 24px;
 }
 .general_carousel .caption-carousel {
-  padding-top: 15px;
+  padding-top: 0;
 }
 .general_carousel .carousel-control-prev img {
   transform: rotate(180deg);
@@ -2305,6 +2312,7 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
      object-fit: cover;
 }
 .general_carousel .carousel-item p {
+  font-weight: 300;
   text-align: center;
   margin-top: 8px;
 }
@@ -2324,9 +2332,10 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
 
 .doc_block {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 900;
   font-family: "Source Sans Pro", sans-serif;
-  color: #555582;
+  line-height: 150%;
+  color: #40408C;
   margin-bottom: 3px;
   display: inline-block;
 }
@@ -2341,6 +2350,9 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
   color: #ffffff;
   background: #555582;
   display: inline-block;
+}
+.doc_block:hover img {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(16%) saturate(1430%) hue-rotate(201deg) brightness(97%) contrast(91%);
 }
 
 .document_era.add-calendar .doc_block img {
@@ -2416,10 +2428,17 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
   border-top: none;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
-.img_text_card_row .text-img-wrap .text_card_block p {
-  margin-bottom: 16px;
+.img_text_card_row .text-img-wrap .text_card_block h3 {
+  font-size: 18px;
+  line-height: 25px;
 }
-.img_text_card_row .text-img-wrap:hover h4 {
+.img_text_card_row .text-img-wrap .text_card_block p {
+  margin-bottom: 0;
+}
+.img_text_card_row .text-img-wrap:hover {
+  outline: solid 1px #555582;
+}
+.img_text_card_row .text-img-wrap:hover h3 {
   text-decoration: underline;
 }
 .img_text_card_row .text-img-wrap .category {
@@ -2490,8 +2509,9 @@ button.close {
   justify-content: center;
 }
 .img_button_row .img_btn_col {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 16px;
 }
 .img_button_row .img_block {
   overflow: hidden;
@@ -2517,7 +2537,7 @@ button.close {
   position: absolute;
   z-index: 1;
   display: none;
-  background-color: rgba(95, 36, 159, 0.75);
+  background: linear-gradient(0deg, rgba(51, 51, 84, 0.8), rgba(51, 51, 84, 0.8));
 }
 .img_button_row .img_block .img_block_descr {
   top: 0;
@@ -2546,8 +2566,9 @@ button.close {
 }
 .img_button_row .img_block .img_block_descr h3 {
   width: 100%;
-  bottom: 18px;
-  font-size: 20px;
+  bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
   margin: 0 auto;
   padding: 0 15px;
   position: absolute;
@@ -2557,7 +2578,7 @@ button.close {
   display: flex;
   justify-content: end;
   flex-direction: column;
-  background: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.5) 83%, rgba(0, 0, 0, 0.5) 100%);
 }
 .img_button_row .img_block:hover .img_block_descr h3 {
   top: 0;
@@ -2576,13 +2597,13 @@ button.close {
 .img_button_row .img_block:hover .img_block_title {
   display: none;
 }
+.img_button_row .img_block.no-content:hover h3 {
+  top: -50%;
+  transform: translateY(50%);
+}
 
 .main-services .img_button_row .img_block:hover .img_block_descr h3 {
   top: auto;
-}
-
-.station-overview .img_button_row .img_block:hover .img_block_descr h3 {
-  top: -25%;
 }
 
 /*================================= Button list Section Start =======================================*/
@@ -2608,12 +2629,12 @@ button.close {
   min-height: 50px;
   align-items: center;
   padding: 10px;
-  background-color: #000000;
+  background-color: #333354;
   border-radius: 5px;
   height: 100%;
   position: relative;
   border: 0;
-  font-weight: 500;
+  font-weight: 600;
   transition: background-color 0.3s ease-in-out;
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -2668,7 +2689,7 @@ button.close {
 
 /*================================= How to Section Start =======================================*/
 .howto {
-  background: #FCFEFF;
+  background: #FFFBF2;
 }
 .howto .container {
   max-width: 900px;
@@ -2689,21 +2710,20 @@ button.close {
   text-transform: none;
 }
 .how_to_cont .how_row .number {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 100px;
   display: flex;
-  min-width: 48px;
-  min-height: 48px;
+  min-width: 50px;
+  min-height: 50px;
   justify-content: center;
   align-items: center;
   margin-right: 16px;
-  background: transparent;
-  color: #555582;
-  font-weight: 700;
+  background: #333354;
+  color: #ffffff;
   font-size: 24px;
+  font-weight: 600;
   font-family: "Source Sans Pro", sans-serif;
-  border: 3px solid #555582;
 }
 .how_to_cont .how_row p.how_title {
   font-weight: 700;
@@ -2716,7 +2736,7 @@ button.close {
 /*================================= How to Section End =======================================*/
 /*================================= Contact Card Section Start =======================================*/
 .contactcard_row .contact_col {
-  padding: 0px 12px;
+  padding: 0px 8px;
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
@@ -2730,7 +2750,6 @@ button.close {
 }
 .contactcard_row .contact_box {
   border: 0;
-  height: 100%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
@@ -2738,7 +2757,7 @@ button.close {
   margin-bottom: 0;
 }
 .contactcard_row .contact_box h3 {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 .contactcard_row .contact_box .cont_img img {
   width: 100%;
@@ -2888,16 +2907,9 @@ h2 + .expand_img_grid {
   text-align: left;
   background: #ffffff;
 }
-.expanding-grid .expand_det h3 {
-  /*color: $black;
-  font-size: 18px;
-  margin-bottom: 3px;
-  font-weight: 700;*/
-}
-.expanding-grid .expand_det h4 {
-  /*text-decoration: none;
-  font-size: 16px;
-  font-weight: normal;*/
+.expanding-grid .expand_det span.h4 {
+  display: block;
+  margin-bottom: 4px;
 }
 .expanding-grid .links {
   padding: 0;
@@ -2983,14 +2995,14 @@ h2 + .expand_img_grid {
   opacity: 0.5;
 }
 .expanding-grid .expand-content {
-  margin: 3px 7px 7px;
-  padding: 48px 200px;
+  margin: 3px 7px 16px;
+  padding: 32px 200px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 992px) {
   .expanding-grid .expand-content {
-    padding: 40px;
+    padding: 30px;
   }
 }
 .expanding-grid .expand-content .phone_email {
@@ -3572,11 +3584,6 @@ p.news_category {
   position: relative;
 }
 .news_content .news_date {
-  font-weight: 700;
-  color: #555582;
-  margin-bottom: 3px;
-}
-.news_content .news_date {
   color: #333354;
   font-weight: 700;
   margin-bottom: 8px;
@@ -3723,18 +3730,43 @@ p.news_category {
 /*================================= News Page End =======================================*/
 /*================================= News Details Page Start =======================================*/
 .news_detail {
-  padding-top: 24px;
+  padding-top: 40px;
   padding-bottom: 50px;
-  background-color: #FCF3DE;
+}
+.news_detail .news_content:hover {
+  outline: none;
+}
+.news_detail .news_content:hover h3 {
+  text-decoration: none;
 }
 .news_detail .news_content .newsinfo {
+  padding: 0;
   border: none;
+  background: transparent;
+  box-shadow: none;
+}
+.news_detail .news_content .newsinfo h3 {
+  font-size: 24px;
+}
+.news_detail .news_content .newsinfo .news_date {
+  display: block;
+  margin-bottom: 24px;
+}
+.news_detail .news_content .newsinfo .quotePara {
+  padding-left: 0;
+  padding-right: 0;
 }
 .news_detail .page_title {
   padding-bottom: 30px;
 }
 .news_detail .container {
   max-width: 900px;
+}
+@media (min-width: 900px) {
+  .news_detail .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .news_detail .news-dt-img {
   margin-bottom: 20px;
@@ -7064,7 +7096,6 @@ legend.gform-field-label {
   width: 100%;
 }
 
-.station-overview {
-  padding-top: 26px;
-  padding-bottom: 50px;
+.department_overview {
+  padding: 56px 0 84px;
 }/*# sourceMappingURL=custom.css.map */
