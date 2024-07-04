@@ -1929,6 +1929,12 @@ div.asp_r.asp_r_1.vertical{
             p{
                 margin-bottom: 5px;
             }
+            .news_date{
+                color: $jacarta;
+                @include bold;
+                margin-bottom: 8px;
+                line-height: 20px;
+            }
             a{
                 bottom: 15px;
                 position: absolute;

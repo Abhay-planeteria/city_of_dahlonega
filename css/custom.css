@@ -1922,6 +1922,12 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
 .up-meetings-wrapper .event-box .event-content p {
   margin-bottom: 5px;
 }
+.up-meetings-wrapper .event-box .event-content .news_date {
+  color: #333354;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 20px;
+}
 .up-meetings-wrapper .event-box .event-content a {
   bottom: 15px;
   position: absolute;
