@@ -9,15 +9,15 @@ $goldenrod:#D6A529;
 $space-cadet:#2B2B4B;
 $source-sans: 'Source Sans Pro', sans-serif;
 $goudy-bookletter: 'Goudy Bookletter 1911', sans-serif;
-$black:#000000;
+$black:#030504;
 $white:#ffffff;
 // color paltte - 
-$colors:( "primary":$primary, "secondary":$secondary, "jacarta":#333354, "black":#000000, "dark-slate-blue":#40408C, "pearl":#EEE3C6, "water":#C9E3F7, "goldenrod":#D6A529, "space-cadet":#2B2B4B);
+$colors:( "primary":$primary, "secondary":$secondary, "tertiary":$tertiary, "jacarta":#333354, "black":#030504, "dark-slate-blue":#40408C, "pearl":#EEE3C6, "water":#C9E3F7, "goldenrod":#D6A529, "space-cadet":#2B2B4B);
 .test-btn {
     background-color: map-get($colors, "secondary");
 }
 
-@mixin fancy-border($size:1px, $color:#000) {
+@mixin fancy-border($size:1px, $color: #030504) {
     border: $size solid $color;
     border-radius: 5px;
     -webkit-border-radius: 5px;

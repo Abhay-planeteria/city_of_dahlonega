@@ -345,12 +345,12 @@ select {
     min-width: 130px;
     background-size: 20px;
     color: $black;
-    border: 1px solid #000;
+    border: 1px solid $black;
     min-height: 50px;
     &.form-control {
         color: $black;
         cursor: pointer;
-        //border: 1px solid #000;
+        //border: 1px solid $black;
         overflow: hidden;
         border-radius: 0px;
         padding-left: 16px;
@@ -372,23 +372,23 @@ select {
         z-index: 9;
     }
     .form-control {
-        color: #000;
+        color: $black;
         border-radius: 0px !important;
         &:focus{
             border: solid 1px $tertiary !important;
         }
     }
         ::-webkit-input-placeholder {
-        color: #000;
+        color: $black;
     }
         ::-moz-placeholder {
-        color: #000;
+        color: $black;
     }
         :-ms-input-placeholder {
-        color: #000;
+        color: $black;
     }
         :-moz-placeholder {
-        color: #000;
+        color: $black;
     }
 }
 label,
@@ -414,22 +414,22 @@ input[type=checkbox]{
 }
 
 ::-webkit-input-placeholder {
-    color: #000 !important;
+    color: $black !important;
     opacity: 1 !important;
 }
 
 ::-moz-placeholder {
-    color: #000 !important;
+    color: $black !important;
     opacity: 1 !important;
 }
 
 :-ms-input-placeholder {
-    color: #000 !important;
+    color: $black !important;
     opacity: 1 !important;
 }
 
 :-moz-placeholder {
-    color: #000 !important;
+    color: $black !important;
     opacity: 1 !important;
 }
 
@@ -644,7 +644,7 @@ input[type=checkbox]{
             background: #fff;
             position: absolute;
             padding: 20px 0px 20px 0px;
-            box-shadow: 0px 0px 6px #00000029;
+            box-shadow: 0px 0px 6px #03050429;
             z-index: 9;
             .probox .proinput{
                 padding: 0;
@@ -773,7 +773,7 @@ input[type=checkbox]{
             top: 100%;
             border: 0;
             padding-top: 5px;
-            box-shadow: 0px 3px 6px #00000029;
+            box-shadow: 0px 3px 6px #03050429;
             border-radius: 0;
             padding-bottom: 15px;
             >li {
@@ -861,7 +861,7 @@ input[type=checkbox]{
         border: 0;
         transform: translateX(-50%);
         left: 50%;
-        box-shadow: 0px 3px 6px #00000029;
+        box-shadow: 0px 3px 6px #03050429;
         a {
             font-weight: 500;
             color: $black;
@@ -962,7 +962,7 @@ div.asp_r.asp_r_1.vertical{
                 background: $tertiary;
                 padding: 5px 6px;
                 width: 72px;
-                color: #000102;
+                color: $black;
                 font-weight: 600;
                 font-size: 13px;
                 display: flex;
@@ -1456,7 +1456,7 @@ div.asp_r.asp_r_1.vertical{
     }
     .navblock_txt{
         p{
-            color: #030504;
+            color: $black;
             @include semi;
             margin-bottom: 12px;
         }
@@ -1902,7 +1902,7 @@ div.asp_r.asp_r_1.vertical{
             background-color: #C9E3F7;
             span{
                 @include source-sans;
-                color: #030504;
+                color: $black;
                 display: block;
                 font-size: 32px;
                 @include bolder;
@@ -1918,7 +1918,7 @@ div.asp_r.asp_r_1.vertical{
             height: 100%;
             padding: 16px 15px 16px 24px;
             h3{
-                color: #030504;
+                color: $black;
                 font-size: 18px;
                 margin-bottom: 16px;
             }
@@ -3142,7 +3142,7 @@ h2+.expand_img_grid {
         }
         h2 {
             font-size: 40px;
-            color: #030504;
+            color: $black;
             line-height: 50px;
             margin-bottom: 0px;
             @media (max-width: 768px) {
@@ -3202,7 +3202,7 @@ h2+.expand_img_grid {
                 padding: 0;
                 right: 0;
                 //background-color: $cyber-yellow;
-                //box-shadow: 0px 0px 3px #00000029;
+                //box-shadow: 0px 0px 3px #03050429;
                 img{
                     filter: brightness(0) saturate(100%) invert(0%) sepia(50%) saturate(1460%) hue-rotate(114deg) brightness(90%) contrast(105%);
                 }
@@ -3364,7 +3364,7 @@ h2+.expand_img_grid {
 
             font-family: "source-sans Nova", sans-serif !important;
             font-size: 15px !important;
-            color: #000102!important;
+            color: $black !important;
             border-bottom: 0!important;
             font-weight: normal !important;
             &:focus{
@@ -3374,25 +3374,25 @@ h2+.expand_img_grid {
         ::-webkit-input-placeholder {
             font-family: "source-sans Nova", sans-serif !important;
             font-size: 15px !important;
-            color: #000102 !important;
+            color: $black !important;
             font-weight: normal !important;
         }
         ::-moz-placeholder {
             font-family: "source-sans Nova", sans-serif !important;
             font-size: 15px !important;
-            color: #000102!important;
+            color: $black !important;
             font-weight: normal !important;
         }
         :-ms-input-placeholder {
             font-family: "source-sans Nova", sans-serif !important;
             font-size: 15px !important;
-            color: #000102 !important;
+            color: $black !important;
             font-weight: normal !important;
         }
         :-moz-placeholder {
             font-family: "source-sans Nova", sans-serif !important;
             font-size: 15px !important;
-            color: #000102 !important;
+            color: $black !important;
             font-weight: normal !important;
         }
         .promagnifier {
@@ -3411,7 +3411,7 @@ h2+.expand_img_grid {
     }
     .form-control {
         min-width: 320px;
-        border: 1px solid #000000;
+        border: 1px solid $black;
     }
 }
 
@@ -3598,7 +3598,7 @@ h2+.expand_img_grid {
                 left: 0px;
                 width: 2px;
                 height: 20px;
-                background: #000000;
+                background: $black;
                 top: 1px;
             }
         }
@@ -3717,7 +3717,7 @@ p.news_category {
 .newsBody {
     //padding: 15px 0px;
     p:last-child{
-        color: #030504;
+        color: $black;
         margin-bottom: 0;
     }
     h3{
@@ -3729,7 +3729,7 @@ p.news_category {
     background: $primary;
     text-align: center;
     padding: 56px 0 36px;
-    //box-shadow: 0px 0px 3px #00000029;
+    //box-shadow: 0px 0px 3px #03050429;
     .container{
         max-width: 900px;
     }
@@ -4773,7 +4773,7 @@ body .is-layout-constrained>.wp-block-group {
             display: inline;
             margin: 0px 3px;
             padding: 4px 4px;
-            color: #000000;
+            color: $black;
             font-size: 18px;
             text-transform: uppercase;
             cursor: pointer;
@@ -4830,7 +4830,7 @@ body .is-layout-constrained>.wp-block-group {
     }
     .advgb-recent-post {
         background: $white;
-        box-shadow: 0px 3px 6px #00000029;
+        box-shadow: 0px 3px 6px #03050429;
         &:hover {
             outline: 1px solid #68C7EF;
             h2 {
@@ -4979,7 +4979,7 @@ body .is-layout-constrained>.wp-block-group {
                 button {
                     background: none !important;
                     font-size: 0;
-                    border: 1px solid #000;
+                    border: 1px solid $black;
                     width: 10px;
                     height: 10px;
                     border-radius: 100px;
@@ -4989,7 +4989,7 @@ body .is-layout-constrained>.wp-block-group {
                     }
                 }
                 &.slick-active button {
-                    background: #000 !important;
+                    background: $black !important;
                 }
             }
         }
@@ -5151,7 +5151,7 @@ body .is-layout-constrained>.wp-block-group {
         max-width: 540px;
         min-width: 540px;
         padding: 25px 40px;
-        box-shadow: 0px 3px 6px #00000029;
+        box-shadow: 0px 3px 6px #03050429;
         border-radius: 0;
         position: absolute;
         top: 0;
@@ -5840,7 +5840,7 @@ body .is-layout-constrained>.wp-block-group {
 }
 .tooltip-inner {
     background-color: $white;
-    box-shadow: 0px 0px 3px #00000029;
+    box-shadow: 0px 0px 3px #03050429;
     border: 1px solid #dbdbdb;
     border-radius: 0px;
     color: $black;
@@ -5852,22 +5852,22 @@ body .is-layout-constrained>.wp-block-group {
 
 .tooltip.bs-tooltip-right .arrow:before {
     border-right-color: $white !important;
-    box-shadow: 0px 0px 3px #00000029;
+    box-shadow: 0px 0px 3px #03050429;
 }
 
 .tooltip.bs-tooltip-left .white:before {
     border-left-color: $white !important;
-    box-shadow: 0px 0px 3px #00000029;
+    box-shadow: 0px 0px 3px #03050429;
 }
 
 .tooltip.bs-tooltip-bottom .arrow:before {
     border-bottom-color: $white !important;
-    box-shadow: 0px 0px 3px #00000029;
+    box-shadow: 0px 0px 3px #03050429;
 }
 
 .tooltip.bs-tooltip-top .arrow:before {
     border-top-color: $white !important;
-    box-shadow: 0px 0px 3px #00000029;
+    box-shadow: 0px 0px 3px #03050429;
 }
 
 .tooltip .arrow:before {
@@ -5977,7 +5977,7 @@ body .is-layout-constrained>.wp-block-group {
             h5 {
                 margin: 0px;
                 font-weight: 700;
-                color: #000;
+                color: $black;
                 text-transform: none;
                 font-size: 18px;
             }
@@ -6049,6 +6049,178 @@ body .is-layout-constrained>.wp-block-group {
         }
     }
 }
+
+/*================================= Directory Pages Start =======================================*/
+.directory-wrapper {
+    padding: 24px 0;
+    .directory-content {
+        margin: 0 auto;
+        max-width: 900px;
+        .newsInRow{
+            margin: 0;
+        }
+        .search_filter_title {
+            display: flex;
+            @media (max-width: 882px) {
+                display: block;
+            }
+            .search_input{
+                min-width: 220px;
+                max-width: 220px;
+                margin-right: 8px;
+                @media (max-width: 768px) {
+                    min-width: 100%;
+                    max-width: 100%;
+                }
+                .input-group{
+                    max-width: 100%;
+                }
+            }
+            .filterWrap{
+                display: block !important;
+                form{
+                    grid-template-columns: 220px 220px;
+                }
+            }
+            .filter_box{
+                margin-right: 8px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        .nsRight{
+            .newsSort{
+                width: 220px;
+                @media (max-width: 992px) {
+                    width: fit-content;
+                }
+            }
+        }
+        .search-box{
+            margin-bottom: 0;
+            @media (max-width: 882px) {
+                margin-bottom: 8px;
+            }
+        }
+        .datetime{
+            margin-bottom: 0;
+        }
+        .accordion_era {
+            margin-top: 24px;
+            .acco_link {
+                cursor: pointer;
+                margin-bottom: 18px;
+                .acco_panel{
+                    .document_era{
+                        margin-bottom: 0;
+                        padding: 8px 0;
+                        .doc_block{
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+                .main_acco_title{
+                    background: $white;
+                    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+                    &:hover{
+                        outline: 1px solid $jacarta;
+                        .doc_block{
+                            @include underline;
+                        }
+                    }
+                }
+                &.accordion_block{
+                    .main_acco_title{
+                        .document_era{
+                            .doc_block{
+                                color: $black;
+                                img{
+                                    display: none;
+                                }
+                            }
+                        }
+                        &:hover{
+                            .doc_block{
+                                text-decoration: none;
+                            }
+                            .accosign {
+                                background: $tertiary;
+                                img {
+                                    filter: brightness(0) invert(1);
+                                }
+                            }
+                        }
+                    }
+                    h3{
+                        @include source-sans;
+                    }
+                }
+            }
+            .acco_title_info {
+                flex-grow: 1;
+                padding: 8px 16px;
+                padding-right: 60px;
+                .cat_dept_title{
+                    margin-bottom: 8px;
+                    span {
+                        color: $jacarta;
+                        @include regular;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        border-right: solid 1px $jacarta;
+                        padding-right: 10px;
+                        margin-right: 10px;
+                        &:last-child{
+                            border-right: 0;
+                            padding-right: 0;
+                            margin-right: 0;
+                        }
+                    }
+                }
+                .document_era{
+                    margin-bottom: 0;
+                    padding: 5px 0;
+                }
+            }
+        }
+        .accosign {
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            border-radius: 50px;
+            background: transparent;
+            justify-content: center;
+            img {
+                max-width: 22px;
+            }
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:882px) {
+    .directory-wrapper .newsInRow .nsleft,
+    .directory-wrapper .newsInRow .nsRight{
+        flex: auto;
+        max-width: fit-content;
+    }
+}
+@media (max-width:768px) {
+    .directory-wrapper .directory-content .newsInRow{
+        display: block;
+    }
+    .directory-wrapper .newsInRow .nsleft,
+    .directory-wrapper .newsInRow .nsRight{
+        max-width: 100%;
+    }
+}
+/*================================= Diectory Pages End =======================================*/
+
 
 /*================================= Station Details Page Start =======================================*/
 .station-mapwrap{
@@ -6522,7 +6694,7 @@ body .is-layout-constrained>.wp-block-group {
 }
 
 .acco_panel {
-    padding: 32px 16px 0;
+    padding: 18px 40px 0;
     display: none;
     //background: $tertiary;
     .btn_sm {
@@ -6918,7 +7090,7 @@ body .is-layout-constrained>.wp-block-group {
     a,
     span {
         border: 0;
-        color: #000;
+        color: $black;
         font-weight: normal;
         position: relative;
         font-size: 18px;
@@ -6968,7 +7140,7 @@ body .is-layout-constrained>.wp-block-group {
     }
     &:hover {
         text-decoration: underline;
-        color: #000000 !important;
+        color: $black !important;
     }
 }
 
@@ -7137,7 +7309,7 @@ legend.gform-field-label {
 }
 
 .ajaxsearchpro {
-    //box-shadow: 0px 3px 6px #00000029 !important;
+    //box-shadow: 0px 3px 6px #03050429 !important;
     border: 0 !important;
     background: $white !important;
     min-width: 280px;
@@ -7266,7 +7438,7 @@ legend.gform-field-label {
             button {
                 background: none !important;
                 font-size: 0;
-                border: 1px solid #000;
+                border: 1px solid $black;
                 width: 10px;
                 height: 10px;
                 border-radius: 100px;
@@ -7276,7 +7448,7 @@ legend.gform-field-label {
                 }
             }
             &.slick-active button {
-                background: #000 !important;
+                background: $black !important;
             }
         }
     }
