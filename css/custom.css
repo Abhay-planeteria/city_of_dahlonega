@@ -2572,6 +2572,7 @@ button.close {
   margin: 0 auto;
   padding: 0 15px;
   position: absolute;
+  transition: transform 0.5s ease;
   /* transform: translateY(calc(100% - 50px)); */
 }
 .img_button_row .img_block:hover .img_block_descr {
@@ -2586,6 +2587,7 @@ button.close {
   text-decoration: underline;
   position: relative;
   transform: translateY(0);
+  transition: transform 0.5s ease;
 }
 .img_button_row .img_block:hover .img_block_descr p {
   display: block;
