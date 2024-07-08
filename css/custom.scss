@@ -6205,6 +6205,103 @@ body .is-layout-constrained>.wp-block-group {
     }
 }
 
+/* == Staff Directory == */
+.staff-directory-wrapper{
+    .directory-content{
+        max-width: 1000px;
+        .nsRight .newsSort{
+            width: 207px;
+        }
+        .search_filter_title .filterWrap form{
+            grid-template-columns: 366px;
+        }
+        .accordion_era .accordion_block{
+            cursor: pointer;
+            margin-bottom: 18px;
+            .main_acco_title{
+                background: $white;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+                @media (max-width: 768px) {
+                    display: block;
+                }
+                &:hover{
+                    outline: 1px solid $jacarta;
+                    .accosign {
+                        background: $tertiary;
+                        img {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+                }
+                .acco_title_info {
+                    flex-grow: 1;
+                    min-height: 63px;
+                    padding: 8px 16px;
+                    padding-right: 40px;
+                    .cat_dept_title{
+                        margin-bottom: 0;
+                        span {
+                            border: 0;
+                            color: $black;
+                            @include bold;
+                            display: block;
+                            font-size: 16px;
+                            margin-right: 0;
+                            padding-right: 0;
+                            margin-bottom: 6px;
+                            text-transform: none;
+                            &:last-child{
+                                @include regular;
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                }
+                .department_name{
+                    top: 50%;
+                    margin: 0;
+                    right: 57px;
+                    color: $jacarta;
+                    position: absolute;
+                    text-align: center;
+                    text-transform: uppercase;
+                    transform: translateY(-50%);
+                    @media (max-width: 882px) {
+                        max-width: 400px;
+                    }
+                    @media (max-width: 768px) {
+                        top: auto;
+                        right: auto;
+                        transform: none;
+                        text-align: left;
+                        position: relative;
+                        padding: 0 60px 8px 16px;
+                        max-width: fit-content;
+                    }
+                }
+            }
+            .acco_panel-inner{
+                padding-top: 8px;
+                img{
+                    margin-right: 24px;
+                }
+                .addrs_box{
+                    padding-top: 16px;
+                    a{
+                        display: block;
+                        &.tel-no{
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+            }
+        }
+        .accosign {
+            right: 10px;
+        }
+    }
+}
+
 @media (min-width:768px) and (max-width:882px) {
     .directory-wrapper .newsInRow .nsleft,
     .directory-wrapper .newsInRow .nsRight{
@@ -6222,7 +6319,6 @@ body .is-layout-constrained>.wp-block-group {
     }
 }
 /*================================= Diectory Pages End =======================================*/
-
 
 /*================================= Station Details Page Start =======================================*/
 .station-mapwrap{
