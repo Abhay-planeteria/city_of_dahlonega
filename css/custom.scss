@@ -3527,6 +3527,9 @@ h2+.expand_img_grid {
     .rsltBody {
         background: $white;
         padding: 15px 20px 20px 20px;
+        h3 {
+            font-size: 18px;
+        }
         p{
             margin-bottom: 10px;
             &:last-child{
@@ -3535,7 +3538,9 @@ h2+.expand_img_grid {
         }
     }
     .re_category {
-        margin-bottom: 5px;
+        display: block;
+        color: $jacarta;
+        margin-bottom: 8px;
         text-transform: uppercase;
     }
     >a {
@@ -3545,7 +3550,7 @@ h2+.expand_img_grid {
         text-decoration: none !important;
     }
     &:hover {
-        h4 {
+        h3 {
             text-decoration: underline;
         }
     }

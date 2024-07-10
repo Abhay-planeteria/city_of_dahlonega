@@ -3447,6 +3447,9 @@ h2 + .expand_img_grid {
   background: #ffffff;
   padding: 15px 20px 20px 20px;
 }
+.result_row .rsltBody h3 {
+  font-size: 18px;
+}
 .result_row .rsltBody p {
   margin-bottom: 10px;
 }
@@ -3454,7 +3457,9 @@ h2 + .expand_img_grid {
   margin-bottom: 0;
 }
 .result_row .re_category {
-  margin-bottom: 5px;
+  display: block;
+  color: #333354;
+  margin-bottom: 8px;
   text-transform: uppercase;
 }
 .result_row > a {
@@ -3463,7 +3468,7 @@ h2 + .expand_img_grid {
   font-weight: normal;
   text-decoration: none !important;
 }
-.result_row:hover h4 {
+.result_row:hover h3 {
   text-decoration: underline;
 }
 
