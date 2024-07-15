@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Parks Interactive Map</title>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- ============================= Header Start ================================== -->
+    <header class="main_header">
+        <div class="navbar navbar-expand-xl">
+            <div class="container-fluid">
+                <div class="logo_wrap">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/Logo.svg" alt="logo">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="icon-bar top"></span>
+               <span class="icon-bar midlde"></span>
+               <span class="icon-bar last"></span>
+               <span>MENU</span>
+               </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <div class="top_header_cont">
+                        <div class="top_menu">
+                            <!-- <div class="social_media">
+                                <ul>
+                                    <li>
+                                        <a href=""><img src="img/facebook.svg" alt=""> </a>
+                                    </li>
+                                    <li>
+                                        <a href=""><img src="img/instagram.svg" alt=""> </a>
+                                    </li>
+                                    <li>
+                                        <a href=""><img src="img/twitter.svg" alt=""> </a>
+                                    </li>
+                                    <li>
+                                        <a href=""><img src="img/linkedin.svg" alt=""> </a>
+                                    </li>
+                                    <li>
+                                        <a href=""><img src="img/youtube.svg" alt=""> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="top_inner_menu">
+                                <li> <a href="#"> Contact Us </a> </li>
+                                <li> <a href="#"> Service Alerts</a> </li>
+                                <li> <a href="#"> Lost & Found</a> </li>
+                            </ul> -->
+                            <ul class="top_inner_menu">
+                                <li> <a href="#"> City Ordinances </a> </li>
+                                <li> <a href="#"> Pay Online </a> </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="select_language">
+                                            <select class="form_control">
+                                                <option>Translate</option>
+                                                <option>English</option>
+                                                <option>Spain</option>
+                                            </select>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="top_search">
+                                <img src="img/search.png" style="max-height: 35px;width: 180px;" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav_bottom  ">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#">Government</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Residents</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Community</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Business</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"> Business </a> </li>
+                                    <li><a href="#"> Business </a> </li>
+                                    <li><a href="#"> Business </a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ============================= Header End ================================== -->
+    
+    <!-- ============================= Main Wrapper Start ================================== -->
+    <div class="main_wrapper">
+        <!-- ============================= Breadcurmb Start ================================== -->
+        <div class="main_breadcrumb">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"> HOME</a></li>
+                        <li class="breadcrumb-item"><a href="#"> SECTION TITLE </a></li>
+                        <li class="breadcrumb-item active" aria-current="page"> CURRENT PAGE </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- ============================= Breadcurmb End ================================== -->
+
+        <div class="page_title main_title text-center">
+            <h1>City Parks</h1>
+        </div>
+
+        <div class="park-mapWrap container-fluid">
+            <div class="row mapWrap-row">
+                <div class="col_left">
+                    <div class="filterWrap">
+                        <form>
+                            <div class="filter_box col-one" id="">
+                                <label class="title" for="SEARCH filter">Filter</label>
+                                <select id="" class="form-control">
+                                    <option>Amenities</option>
+                                    <option class="">All</option>
+                                    <option class="">1</option>
+                                    <option class="">2</option>
+                                </select>
+                            </div>
+                            <div class="filter_box col-two" id="">
+                                <!-- <label style="visibility: hidden" class="title" for="SEARCH filter">By Department</label> -->
+                                <select id="" class="form-control">
+                                    <option>Region</option>
+                                    <option class="">All</option>
+                                    <option class="">1</option>
+                                    <option class="">2</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <h4>For More Recreational Activities Visit Lumpkin County Parks and Recreation</h4>
+                    <a href="#" class="btn_sm">Lumpkin County Parks  and Rec</a>
+                </div>
+                 
+                <!-- ============================= Map area Start ================================== -->
+                <div class="col_right">
+                    <img class="park-mapImg" src="img/park-map.png" alt="">
+                </div>
+                <!-- ============================= Map area End ================================== -->
+            </div>
+        </div>
+        
+        <div class="park-amenities">
+            <div class="container">
+                <div class="detail-row row">
+
+                    <!-- ============================= Image text card Start ================================== -->
+                    <section class="img_text_card">
+                        <div class="container">
+                            <div class="img_text_card_row row">
+                                <div class="col-md-4 img_text_card_col">
+                                    <div class="text-img-wrap">
+                                        <a href="#">
+                                            <div class="img_card_block">
+                                                <img src="img/amenities-img01.png" alt="">
+                                            </div>
+                                            <div class="text_card_block">
+                                                <span class="region">Region</span>
+                                                <h3>Location name</h3>
+                                                <div class="amenitiy-wrapper">
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_boyGirl.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_tree.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_cycle.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_badminton.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_basketBall.svg" alt=""></span>
+                                                </div>
+                                                <ul class="amenitiy-list-wrapper">
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 img_text_card_col">
+                                    <div class="text-img-wrap">
+                                        <a href="#">
+                                            <div class="img_card_block">
+                                                <img src="img/amenities-img02.png" alt="">
+                                            </div>
+                                            <div class="text_card_block">
+                                                <span class="region">Region</span>
+                                                <h3>Location name</h3>
+                                                <div class="amenitiy-wrapper">
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_boyGirl.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_tree.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_cycle.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_badminton.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_basketBall.svg" alt=""></span>
+                                                </div>
+                                                <ul class="amenitiy-list-wrapper">
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 img_text_card_col">
+                                    <div class="text-img-wrap">
+                                        <a href="#">
+                                            <div class="img_card_block">
+                                                <img src="img/amenities-img03.png" alt="">
+                                            </div>
+                                            <div class="text_card_block">
+                                                <span class="region">Region</span>
+                                                <h3>Location name</h3>
+                                                <div class="amenitiy-wrapper">
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_boyGirl.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_tree.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_cycle.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_badminton.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_basketBall.svg" alt=""></span>
+                                                </div>
+                                                <ul class="amenitiy-list-wrapper">
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 img_text_card_col">
+                                    <div class="text-img-wrap">
+                                        <a href="#">
+                                            <div class="img_card_block">
+                                                <img src="img/amenities-img04.png" alt="">
+                                            </div>
+                                            <div class="text_card_block">
+                                                <span class="region">Region</span>
+                                                <h3>Location name</h3>
+                                                <div class="amenitiy-wrapper">
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_boyGirl.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_tree.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_cycle.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_badminton.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_basketBall.svg" alt=""></span>
+                                                </div>
+                                                <ul class="amenitiy-list-wrapper">
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 img_text_card_col">
+                                    <div class="text-img-wrap">
+                                        <a href="#">
+                                            <div class="img_card_block">
+                                                <img src="img/amenities-img05.png" alt="">
+                                            </div>
+                                            <div class="text_card_block">
+                                                <span class="region">Region</span>
+                                                <h3>Location name</h3>
+                                                <div class="amenitiy-wrapper">
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_boyGirl.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_tree.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_cycle.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_badminton.svg" alt=""></span>
+                                                    <span data-toggle="tooltip" data-original-title="Icon Tool Tip"><img src="img/icon-amenity_basketBall.svg" alt=""></span>
+                                                </div>
+                                                <ul class="amenitiy-list-wrapper">
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                    <li>Amenity without Icon</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </section>
+                    <!-- ============================= Image text card End ================================== -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================= Main Wrapper End ================================== -->
+
+    <!-- ============================= Footer Logo Start ================================== -->
+    <section class="section-footer-logo">
+        <div class="container">
+            <img src="img/footer-logo.svg " alt="Footer logo">
+            <h2>City of Dahlonega, Georgia</h2>
+        </div>
+    </section>
+    <!-- ============================= Footer Logo End ================================== -->
+
+    <!-- ============================= Footer Start ================================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-row row">
+                    <div class="foot_col">
+                        <div class="foot_logo">
+                            <!-- <img src="img/footer-logo.png " alt="logo"> -->
+                            <h4>Contact</h4>
+                            <p><a href="#">465 Riley Road<br>
+                                Dahlonega,GA 30533<br>
+                                706-864-6133<br>
+                                Fax 706-864-4837</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="foot_col">
+                        <div class="footmenu">
+                            <ul class=" ">
+                                <li> <a href="# ">Employee Information</a> </li>
+                                <li> <a href="# ">Human Resources</a> </li>
+                                <li> <a href="# ">E-Verify Registration</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="foot_col">
+                        <div class="footmenu">
+                            <ul class=" ">
+                                <li> <a href="# ">Terms of Use</a> </li>
+                                <li> <a href="# ">Privacy Policy</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="foot_col">
+                        <div class="footmenu">
+                            <ul class=" ">
+                                <li> <a href="# ">Use of External Links</a> </li>
+                                <li> <a href="# ">Human Trafficking Notice</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="foot_col">
+                        <div class="foot_media">
+                            <ul>
+                                <li>
+                                    <a href=""><img src="img/facebook.svg" alt=""> </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="img/instagram.svg" alt=""> </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <ul>
+                        <li><a href="#">Site Policy</a></li>
+                        <li><a href="#">Employee portal</a></li>
+                        <li><a href="#">Copyright 2023</a></li>
+                    </ul>
+                    <!-- <p>© 2024 GRTC Transit System   |   Privacy Policy</p> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ============================= Footer End ================================== -->
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/expand.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/owlmain.js"></script>
+    <script>
+        $(document).on("scroll", function() {
+            if ($(document).scrollTop() > 0) {
+                $(".main_header").addClass("shrink");
+
+            } else {
+                $(".main_header").removeClass("shrink");
+
+            }
+        });
+    </script>
+    <script> 
+        $(document).ready(function () { 
+            $('[data-toggle="tooltip"]').tooltip({ 
+                placement: 'top' 
+            }); 
+        }); 
+    </script>
+</body>
+
+</html>

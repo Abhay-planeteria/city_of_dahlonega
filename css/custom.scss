@@ -3462,7 +3462,7 @@ h2+.expand_img_grid {
     display: flex;
     align-items: center;
     min-height: 5px;
-    padding: 11px 24px 11px 16px;
+    padding: 14px 32px;
     background: $white;
     border: 0;
     padding-right: 40px;
@@ -3478,11 +3478,13 @@ h2+.expand_img_grid {
         color: $black;
         font-size: 16px;
         position: relative;
+        text-transform: none;
     }
     .acco_sign {
-        top: 13px;
-        right: 14px;
+        top: 50%;
+        right: 12px;
         position: absolute;
+        transform: translateY(-50%);
         img {
             width: 24px;
         }
@@ -6306,6 +6308,7 @@ body .is-layout-constrained>.wp-block-group {
 /*================================= Park Interactive Map Page Start =======================================*/
 .park-mapWrap{
     padding: 0;
+    max-width: 1440px;
     margin-bottom: 40px;
     .mapWrap-row{
         margin: 0;
@@ -6316,15 +6319,17 @@ body .is-layout-constrained>.wp-block-group {
         }
     }
     .col_left{
-        //width: 440px;
+        min-width: 30%;
         max-width: 440px;
         background: $pearl;
         padding: 24px;
         padding-left: 48px;
         @media (max-width: 1199.98px) {
+            min-width: 40%;
             padding: 24px;
         }
         @media (max-width: 768px) {
+            min-width: 100%;
             max-width: 100%;
         }
         .search-box{
@@ -6350,14 +6355,52 @@ body .is-layout-constrained>.wp-block-group {
         @media (max-width: 768px) {
             max-width: 100%;
         }
-        img{
+    }
+    .park-mapImg{
+        width: 100%;
+        object-fit: cover;
+        min-height: 600px;
+        max-height: calc(100vh - 80px);
+        @media (max-width: 768px) {
+            min-height: 440px;
+        }
+    }
+}
+.park-detail{
+    .mapWrap-row{
+        gap: 24px;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+    }
+    .col_left{
+        padding: 0;
+        max-width: max-content;
+        background: transparent;
+        @media (max-width: 1199.98px) {
+            padding: 0;
+            min-width: 40%;
+        }
+        @media (max-width: 768px) {
+            min-width: 100%;
+        }
+    }
+    .col_right{
+        max-width: 926px;
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+    .park-mapImg{
+        min-height: 560px;
+    }
+    .general_carousel{
+        margin: 0;
+        .carousel-item img{
             width: 100%;
+            height: 560px;
             object-fit: cover;
-            min-height: 600px;
-            max-height: calc(100vh - 80px);
-            @media (max-width: 768px) {
-                min-height: 440px;
-            }
         }
     }
 }
@@ -6395,7 +6438,7 @@ ul.amenitiy-list-wrapper{
 }
 
 .park-amenities {
-    padding: 0 0 40px;
+    padding: 0 0 20px;
     .detail-row{
         gap: 30px;
         @media (max-width: 768px) {
@@ -6433,17 +6476,39 @@ ul.amenitiy-list-wrapper{
             }
         }
     }
+    &.amenitiy-details{
+        .detail-row{
+            gap: 40px;
+            margin: 0;
+        }
+    }
 }
 
 .det-left-col{
     padding: 24px;
-    max-width: 270px;
-    min-width: 270px;
-    background: $tertiary;
+    max-width: 260px;
+    min-width: 260px;
+    background: $primary;
     @media (max-width: 768px) {
         padding: 24px 40px;
         max-width: 100%;
         min-width: 100%;
+    }
+    .detail-box{
+        margin-bottom: 24px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        h3, p{
+            color: $black;
+        }
+        h3{
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
+        p{
+            margin-bottom: 0;
+        }
     }
 }
 .det-right-col{
@@ -6451,29 +6516,24 @@ ul.amenitiy-list-wrapper{
     @media (max-width: 768px) {
         width: 100%;
     }
+    .amenities{
+        margin-bottom: 40px;
+        .d-grid{
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            @media (max-width: 1199.98px) {
+                grid-template-columns: 200px 200px;
+            }
+        }
+    }
+    .row{
+        margin-bottom: 24px;
+    }
     .wp-block-group.alignfull{
         padding: 0 !important;
     }
     .advgb-tabs-wrapper ul.advgb-tabs-panel li.advgb-tab{
         width: 100%;
-    }
-}
-.detail-box{
-    margin-bottom: 24px;
-    &:last-child{
-        margin-bottom: 0;
-    }
-    h3, p, a{
-        color: $white;
-    }
-    h3{
-        margin-bottom: 5px;
-    }
-    p{
-        margin-bottom: 0;
-    }
-    a{
-        font-weight: 400;
     }
 }
 
