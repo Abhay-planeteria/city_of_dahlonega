@@ -6478,21 +6478,21 @@ ul.amenitiy-list-wrapper li {
 .meeting-wraper .tab-content {
   margin: 0 auto;
   padding-top: 32px;
-  border-top: 1px solid #EAEAEA;
+  background: #FFFDF9;
 }
 .meeting-wraper .tab-content .filter_top {
   max-width: 300px;
   margin-bottom: 50px;
 }
 .meeting-wraper .top-text {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .meeting-wraper .expanding-grid {
   padding-top: 0px;
 }
 .meeting-wraper .meeting-content {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .meeting-wraper .meeting-content h2 {
@@ -6581,30 +6581,40 @@ ul.amenitiy-list-wrapper li {
 .main-tabs .nav-tabs {
   border: none;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 100%;
   justify-content: center;
+  background: #FCF3DE;
 }
 .main-tabs .nav-tabs .nav-item {
-  width: 50%;
+  gap: 4px;
+  padding: 0;
+  border-radius: 0;
+  max-width: 448px;
+  width: 100%;
 }
-.main-tabs .nav-tabs .nav-item:first-child a {
-  border-radius: 5px 0px 0px 0px;
+.main-tabs .nav-tabs .nav-item {
+  margin-right: 4px;
 }
-.main-tabs .nav-tabs .nav-item:last-child a {
-  border-radius: 0px 5px 0px 0px;
+.main-tabs .nav-tabs .nav-item:last-child {
+  margin-right: 0;
 }
 .main-tabs .nav-tabs .nav-item a {
-  color: #030504;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
   font-family: "Source Sans Pro", sans-serif;
-  min-width: 300px;
   text-align: center;
   padding: 14px 10px;
-  background: #ffffff;
-  border: 1px solid #EAEAEA;
+  background: #333354;
+  border-radius: 0;
+  border: 1px solid #333354;
 }
 .main-tabs .nav-tabs .nav-item a.active, .main-tabs .nav-tabs .nav-item a:hover {
-  color: #ffffff;
-  background: #030504;
+  color: #030504;
+  background: #FFFDF9;
+  border: 1px solid #FFFDF9;
+  border-bottom-color: transparent;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
 .back_next_posts {
@@ -6804,6 +6814,11 @@ ul.amenitiy-list-wrapper li {
   gap: 16px;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .detail-page .detail_wrapper {
+    flex-direction: column;
+  }
+}
 .detail-page .detail_wrapper .detail-left {
   max-width: 900px;
 }
@@ -6828,6 +6843,11 @@ ul.amenitiy-list-wrapper li {
 }
 .detail-page .detail_wrapper .detail-right {
   max-width: 284px;
+}
+@media (max-width: 768px) {
+  .detail-page .detail_wrapper .detail-right {
+    max-width: 50%;
+  }
 }
 .detail-page .detail_wrapper .detail-right .newsRow .newsColumn {
   width: 100%;

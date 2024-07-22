@@ -6665,21 +6665,22 @@ ul.amenitiy-list-wrapper{
     .tab-content {
         margin: 0 auto;
         padding-top: 32px;
-        border-top: 1px solid #EAEAEA;
+        background: #FFFDF9;
+        //border-top: 1px solid #EAEAEA;
         .filter_top {
             max-width: 300px;
             margin-bottom: 50px;
         }
     }
     .top-text {
-        max-width: 1000px;
+        max-width: 900px;
         margin: 0 auto;
     }
     .expanding-grid {
         padding-top: 0px;
     }
     .meeting-content {
-        max-width: 1000px;
+        max-width: 900px;
         margin: 0 auto;
         h2{
             margin-bottom: 24px;
@@ -6773,31 +6774,40 @@ ul.amenitiy-list-wrapper{
     .nav-tabs {
         border: none;
         margin: 0 auto;
-        max-width: 1000px;
+        max-width: 100%;
         justify-content: center;
+        background: $primary;
         .nav-item{
-            width: 50%;
-            &:first-child a{
-                border-radius: 5px 0px 0px 0px;
-            }
-            &:last-child a{
-                border-radius: 0px 5px 0px 0px;
-            }
+            gap: 4px;
+            //width: calc(50% - 2px);
+            padding: 0;
+            border-radius: 0;
+            max-width: 448px;
+            width: 100%;
         }
     }
     .nav-tabs .nav-item {
+        margin-right: 4px;
+        &:last-child{
+            margin-right: 0;
+        }
         a {
-            color: $black;
+            color: $white;
+            font-size: 18px;
+            @include bold;
             @include source-sans;
-            min-width: 300px;
             text-align: center;
             padding: 14px 10px;
-            background: $white;
-            border: 1px solid #EAEAEA;
+            background: $jacarta;
+            border-radius: 0;
+            border: 1px solid $jacarta;
             &.active,
             &:hover {
-                color: $white;
-                background: $black;
+                color: $black;
+                background: #FFFDF9;
+                border: 1px solid #FFFDF9;
+                border-bottom-color: transparent;
+                box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
             }
         }
     }
@@ -7009,6 +7019,9 @@ ul.amenitiy-list-wrapper{
         gap: 16px;
         //flex-wrap: wrap;
         justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
         .detail-left{
             max-width: 900px;
             .topTitle{
@@ -7036,6 +7049,9 @@ ul.amenitiy-list-wrapper{
         }
         .detail-right{
             max-width: 284px;
+            @media (max-width: 768px) {
+                max-width: 50%;
+            }
             .newsRow .newsColumn{
                 width: 100%;
             }
