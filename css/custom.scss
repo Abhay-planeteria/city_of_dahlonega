@@ -7095,7 +7095,102 @@ ul.amenitiy-list-wrapper{
 
 /*================================= Department Details Page Start =======================================*/
 
+//Department Details
+.detail_wrap {
+    padding-top: 48px;
+}
+
+.dp_detail_info {
+    section {
+       //padding: 50px 0px;
+    }
+    .topTitle{
+        margin-top: 24px;
+        margin-bottom: 24px;
+        h2{
+            margin: 0;
+        }
+    }
+    .img_text_card_row .img_text_card_col{
+        &:first-child{
+            padding-left: 0;
+        }
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+    .img_button_row .img_btn_col{
+        &:first-child{
+            padding-left: 0;
+        }
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+    .FAQ_wrapper{
+        margin-bottom: 40px;
+    }
+}
+
+.sidebar_box {
+    margin-bottom: 48px;
+}
+
+.sidebar-content {
+    padding: 16px 24px;
+    background: $white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    .title-info {
+        margin-bottom: 10px;
+        p{
+            margin-bottom: 0;
+        }
+    }
+    .tel_em_fax{
+        p{
+            margin-bottom: 3px;
+        }
+        strong{
+            font-weight: normal;
+        }
+    }
+}
+
+.dp_news_area{
+    .newsRow .newsColumn{
+        width: 100%;
+    }
+    .news_wraper{
+        padding-top: 0;
+    }
+}
+
 /*================================= Department Details Page End =======================================*/
+
+//Service Detail
+.service-details{
+    padding-top: 48px;
+    padding-bottom: 105px;
+    section{
+        margin: 24px 0 30px;
+    }
+    .detail_wrapper{
+        justify-content: space-between;
+        .detail-left{
+            max-width: 836px;
+        }
+        .detail-right{
+            .related_formLink{
+                h3{
+                    margin-bottom: 16px;
+                }
+                .doc_block{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
 
 /*================================= FAQ Start =======================================*/
 .FAQ_wrapper{
