@@ -126,37 +126,42 @@
 
         <div class="park-mapWrap container-fluid">
             <div class="row mapWrap-row">
-                <div class="col_left">
-                    <div class="search-box">
-                        <div class="search_input">
-                            <form role="search" method="get" id="">
+                <div class="col-lg-4 col-md-4 col_left">
+                    
+                    <div class="searchFilterBlock">
+                        <div class="search-box">
+                            <form action="/search" role="search" method="get" id="searchform">
                                 <label for="" class="title">Search</label>
                                 <div class="input-group">
-                                    <input type="text" id="" class="form-control" placeholder="" name="s">
-                                    <button class="btn btn-default" id="" type="submit">
-                                        <img src="img/search-icon-over.svg" alt="search icon">
+                                    <input type="text" id="searchbox" class="form-control" placeholder="" name="keys" aria-label="Search Box">
+                                    <button class="btn btn-default" id="searchsubmit" type="submit">
+                                        <img src="img/search-icon-over.svg" alt="">
                                     </button>
                                 </div>
                             </form>
                         </div>
+                        <div class="filterBlock">
+                            <form>
+                                <div class="filter_box col-one" id="">
+                                    <label class="title" for="SEARCH filter">Filter</label>
+                                    <select id="" class="form-control">
+                                        <option>By Parking Type</option>
+                                        <option class="">All</option>
+                                        <option class="">1</option>
+                                        <option class="">2</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <!-- <div class="reset text-left">
+                                <a class="btn_sm" href="#"> CLEAR FILTERS</a>
+                            </div> -->
+                        </div>
                     </div>
-                    <div class="filterWrap">
-                        <form>
-                            <div class="filter_box col-one" id="">
-                                <label class="title" for="SEARCH filter">Filter</label>
-                                <select id="" class="form-control">
-                                    <option>By Parking Type</option>
-                                    <option class="">All</option>
-                                    <option class="">1</option>
-                                    <option class="">2</option>
-                                </select>
-                            </div>
-                        </form>
-                    </div>
+                    
                 </div>
                  
                 <!-- ============================= Map area Start ================================== -->
-                <div class="col_right">
+                <div class="col-lg-8 col-md-8 col_right">
                     <img class="park-mapImg" src="img/park-map-01.png" alt="">
                 </div>
                 <!-- ============================= Map area End ================================== -->

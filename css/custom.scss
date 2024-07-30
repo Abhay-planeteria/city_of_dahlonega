@@ -6308,7 +6308,7 @@ body .is-layout-constrained>.wp-block-group {
 /*================================= Park Interactive Map Page Start =======================================*/
 .park-mapWrap{
     padding: 0;
-    max-width: 1440px;
+    //max-width: 1440px;
     margin-bottom: 40px;
     .mapWrap-row{
         margin: 0;
@@ -6319,23 +6319,23 @@ body .is-layout-constrained>.wp-block-group {
         }
     }
     .col_left{
-        min-width: 30%;
-        max-width: 440px;
+        //min-width: 30%;
+        //max-width: 440px;
         background: $pearl;
         padding: 24px;
         padding-left: 48px;
         @media (max-width: 1199.98px) {
-            min-width: 40%;
+            //min-width: 40%;
             padding: 24px;
         }
         @media (max-width: 768px) {
-            min-width: 100%;
-            max-width: 100%;
+            //min-width: 100%;
+            //max-width: 100%;
         }
         .search-box{
             margin-bottom: 32px;
         }
-        .filterWrap{
+        .filterBlock{
             margin-bottom: 75px;
             display: block !important;
             form{
@@ -6351,9 +6351,10 @@ body .is-layout-constrained>.wp-block-group {
     }
     .col_right{
         //width: 1000px;
-        max-width: 1000px;
+        //max-width: 1000px;
+        padding: 0;
         @media (max-width: 768px) {
-            max-width: 100%;
+            //max-width: 100%;
         }
     }
     .park-mapImg{
@@ -6368,7 +6369,7 @@ body .is-layout-constrained>.wp-block-group {
 }
 .park-detail{
     .mapWrap-row{
-        gap: 24px;
+        //gap: 24px;
         justify-content: space-between;
         @media (max-width: 768px) {
             flex-direction: column-reverse;
@@ -6376,18 +6377,19 @@ body .is-layout-constrained>.wp-block-group {
     }
     .col_left{
         padding: 0;
-        max-width: max-content;
+        //max-width: max-content;
         background: transparent;
         @media (max-width: 1199.98px) {
             padding: 0;
-            min-width: 40%;
+            //min-width: 40%;
         }
         @media (max-width: 768px) {
             min-width: 100%;
         }
     }
     .col_right{
-        max-width: 926px;
+        //max-width: 926px;
+        padding-left: 24px;
         @media (max-width: 768px) {
             max-width: 100%;
         }
@@ -6409,6 +6411,7 @@ body .is-layout-constrained>.wp-block-group {
 .amenitiy-wrapper{
     gap: 4px;
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 16px;
     span{
         width: 30px;
@@ -6435,13 +6438,21 @@ ul.amenitiy-list-wrapper{
         line-height: 20px;
         padding: 0;
     }
+    &.d-grid{
+        @media (max-width: 767.99px) {
+            grid-template-columns: 50% 50% !important;
+        }
+        @media (max-width: 480px) {
+            grid-template-columns: 100% !important;
+        }
+    }
 }
 
 .park-amenities {
     padding: 0 0 20px;
     .detail-row{
         gap: 30px;
-        @media (max-width: 768px) {
+        @media (max-width: 767.99px) {
             flex-direction: column;
         }
     }
@@ -6524,10 +6535,16 @@ ul.amenitiy-list-wrapper{
             @media (max-width: 1199.98px) {
                 grid-template-columns: 200px 200px;
             }
+            @media (max-width: 1199.98px) {
+                grid-template-columns: 200px 200px;
+            }
         }
     }
     .row{
         margin-bottom: 24px;
+        @media (max-width: 767.98px) {
+            flex-direction: column;
+        }
     }
     .wp-block-group.alignfull{
         padding: 0 !important;

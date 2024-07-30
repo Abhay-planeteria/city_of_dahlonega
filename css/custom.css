@@ -6106,7 +6106,6 @@ body .is-layout-constrained > .wp-block-group {
 /*================================= Park Interactive Map Page Start =======================================*/
 .park-mapWrap {
   padding: 0;
-  max-width: 1440px;
   margin-bottom: 40px;
 }
 .park-mapWrap .mapWrap-row {
@@ -6120,47 +6119,33 @@ body .is-layout-constrained > .wp-block-group {
   }
 }
 .park-mapWrap .col_left {
-  min-width: 30%;
-  max-width: 440px;
   background: #EEE3C6;
   padding: 24px;
   padding-left: 48px;
 }
 @media (max-width: 1199.98px) {
   .park-mapWrap .col_left {
-    min-width: 40%;
     padding: 24px;
-  }
-}
-@media (max-width: 768px) {
-  .park-mapWrap .col_left {
-    min-width: 100%;
-    max-width: 100%;
   }
 }
 .park-mapWrap .col_left .search-box {
   margin-bottom: 32px;
 }
-.park-mapWrap .col_left .filterWrap {
+.park-mapWrap .col_left .filterBlock {
   margin-bottom: 75px;
   display: block !important;
 }
-.park-mapWrap .col_left .filterWrap form {
+.park-mapWrap .col_left .filterBlock form {
   display: block !important;
 }
-.park-mapWrap .col_left .filterWrap form .filter_box {
+.park-mapWrap .col_left .filterBlock form .filter_box {
   margin-bottom: 8px;
 }
 .park-mapWrap .col_left h4 {
   margin-bottom: 16px;
 }
 .park-mapWrap .col_right {
-  max-width: 1000px;
-}
-@media (max-width: 768px) {
-  .park-mapWrap .col_right {
-    max-width: 100%;
-  }
+  padding: 0;
 }
 .park-mapWrap .park-mapImg {
   width: 100%;
@@ -6176,7 +6161,6 @@ body .is-layout-constrained > .wp-block-group {
 }
 
 .park-detail .mapWrap-row {
-  gap: 24px;
   justify-content: space-between;
 }
 @media (max-width: 768px) {
@@ -6186,14 +6170,11 @@ body .is-layout-constrained > .wp-block-group {
 }
 .park-detail .col_left {
   padding: 0;
-  max-width: -moz-max-content;
-  max-width: max-content;
   background: transparent;
 }
 @media (max-width: 1199.98px) {
   .park-detail .col_left {
     padding: 0;
-    min-width: 40%;
   }
 }
 @media (max-width: 768px) {
@@ -6202,7 +6183,7 @@ body .is-layout-constrained > .wp-block-group {
   }
 }
 .park-detail .col_right {
-  max-width: 926px;
+  padding-left: 24px;
 }
 @media (max-width: 768px) {
   .park-detail .col_right {
@@ -6225,6 +6206,7 @@ body .is-layout-constrained > .wp-block-group {
 .amenitiy-wrapper {
   gap: 4px;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 16px;
 }
 .amenitiy-wrapper span {
@@ -6251,6 +6233,16 @@ ul.amenitiy-list-wrapper li {
   line-height: 20px;
   padding: 0;
 }
+@media (max-width: 767.99px) {
+  ul.amenitiy-list-wrapper.d-grid {
+    grid-template-columns: 50% 50% !important;
+  }
+}
+@media (max-width: 480px) {
+  ul.amenitiy-list-wrapper.d-grid {
+    grid-template-columns: 100% !important;
+  }
+}
 
 .park-amenities {
   padding: 0 0 20px;
@@ -6258,7 +6250,7 @@ ul.amenitiy-list-wrapper li {
 .park-amenities .detail-row {
   gap: 30px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.99px) {
   .park-amenities .detail-row {
     flex-direction: column;
   }
@@ -6345,8 +6337,18 @@ ul.amenitiy-list-wrapper li {
     grid-template-columns: 200px 200px;
   }
 }
+@media (max-width: 1199.98px) {
+  .det-right-col .amenities .d-grid {
+    grid-template-columns: 200px 200px;
+  }
+}
 .det-right-col .row {
   margin-bottom: 24px;
+}
+@media (max-width: 767.98px) {
+  .det-right-col .row {
+    flex-direction: column;
+  }
 }
 .det-right-col .wp-block-group.alignfull {
   padding: 0 !important;
