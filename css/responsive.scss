@@ -3,7 +3,7 @@
 @import "breakpoints";
 @media (min-width:1430px) and (max-width:1530px) {}
 
-@media (max-width:767px) {
+@media (max-width: 767.98px) {
     .page_title h1 {
         font-size: 36px;
     }
@@ -509,7 +509,7 @@
     }
 }
 
-@media (min-width:768px) and (max-width:1024px) {
+@media (min-width:767.98px) and (max-width:1024px) {
     .page-id-31040 {
         .advgb-column-inner {
             margin-left: 15px !important;
@@ -573,7 +573,7 @@
     }
 }
 
-@media (min-width:768px) and (max-width:1200px) {
+@media (min-width:767.98px) and (max-width:1199.98px) {
     .main_banner .carousel-item img {
         //min-height: 500px;
     }
@@ -589,7 +589,7 @@
         //bottom: 270px;
     }
 }
-@media (min-width:768px) and (max-width:882px) {
+@media (min-width:767.98px) and (max-width:882px) {
     .newsInRow {
         .nsleft,
         .nsRight {
@@ -604,7 +604,7 @@
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:767.98px) {
     .page-id-31042 .wp-block-heading+ul {
         position: relative;
         left: 30px;
@@ -621,12 +621,9 @@
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1199.98px) {
     .navbar-expand-xl .navbar-nav {
         margin-right: -15px;
-    }
-    .logged-in .main_header {
-        top: 30px;
     }
     .more-detail {
         padding-right: 10%;
@@ -640,7 +637,7 @@
     }
 }
 
-@media (max-width:992px) {
+@media (max-width:991.98px) {
     .contact_wraper {
         .cont_info {
             padding-top: 10px;
@@ -676,7 +673,7 @@
     }
 }
 
-@media (max-width:1199.9px) {
+@media (max-width:1199.98px) {
     .main_content ul,
     .main_content ol {
         li {
@@ -925,7 +922,7 @@
     }
 }
 
-@media (max-width:768px) and (min-width:430px) {
+@media (max-width:767.98px) and (min-width:430px) {
     .wp-block-media-text.is-image-fill .wp-block-media-text__media {
         min-height: 400px;
     }
@@ -1068,7 +1065,7 @@
     .wp-block-group {
         overflow: hidden;
     }
-    @media (min-width:992px) {
+    @media (min-width:991.98px) {
         p+ul {
             position: relative;
             left: 20px;
@@ -1091,7 +1088,7 @@
     }
 }
 
-@media (max-width:767px) and (min-width:480px) {
+@media (max-width:767.98px) and (min-width:480px) {
     #sbi_images {
         grid-template-columns: repeat(2, 1fr) !important;
     }
@@ -1099,7 +1096,7 @@
 
 /*================================= Footer Section Start =======================================*/
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
     .footer-content{
         padding-top: 22px;
         padding-bottom: 36px;
