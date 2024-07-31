@@ -903,7 +903,8 @@ input[type=checkbox]{
         li.current-menu-item,
         li.current-page-ancestor {
             >a {
-                color: $primary !important;
+                color: $black !important;
+                border-bottom: solid 1px $goldenrod;
             }
         }
     }
@@ -2212,7 +2213,7 @@ div.asp_r.asp_r_1.vertical{
 .main_wrapper {
     padding-top: 100px;
     @media (max-width: 1199.98px) {
-        font-size: 74px;
+        padding-top: 74px;
     }
     p {
         margin-bottom: 24px;

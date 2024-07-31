@@ -875,7 +875,8 @@ input[type=checkbox] {
 .main_header .navbar-nav > li.current_page_item > a,
 .main_header .navbar-nav > li.current-menu-item > a,
 .main_header .navbar-nav > li.current-page-ancestor > a {
-  color: #FCF3DE !important;
+  color: #030504 !important;
+  border-bottom: solid 1px #D6A529;
 }
 .main_header .megamenu {
   display: none;
@@ -2202,7 +2203,7 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
 }
 @media (max-width: 1199.98px) {
   .main_wrapper {
-    font-size: 74px;
+    padding-top: 74px;
   }
 }
 .main_wrapper p {
