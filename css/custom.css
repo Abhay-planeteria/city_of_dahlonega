@@ -355,7 +355,7 @@ select {
   background-repeat: no-repeat;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-position: top 16px right 12px;
+  background-position: top 20px right 16px;
   min-width: 130px;
   background-size: 20px;
   color: #030504;
@@ -644,6 +644,11 @@ input[type=checkbox] {
 }
 .main_header .select_language select option {
   font-size: 16px;
+  color: #030504 !important;
+}
+.main_header .select_language select:focus {
+  box-shadow: none !important;
+  outline: none !important;
 }
 .main_header .select_language select::-ms-expand {
   display: none;
@@ -782,7 +787,8 @@ input[type=checkbox] {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
   margin-top: 17px;
-  padding: 0px 0px 16px 0px !important;
+  margin-bottom: 16px;
+  padding: 0px !important;
   text-align: center;
   display: flex;
   align-items: center;
@@ -798,7 +804,9 @@ input[type=checkbox] {
   }
 }
 .main_header .navbar-nav > li:hover > a {
-  text-decoration: underline;
+  text-decoration: none;
+  margin-bottom: 8px;
+  border-bottom: solid 8px #D6A529;
 }
 .main_header .navbar-nav .dropdown-menu {
   width: 350px;
@@ -876,7 +884,8 @@ input[type=checkbox] {
 .main_header .navbar-nav > li.current-menu-item > a,
 .main_header .navbar-nav > li.current-page-ancestor > a {
   color: #030504 !important;
-  border-bottom: solid 1px #D6A529;
+  margin-bottom: 8px;
+  border-bottom: solid 8px #D6A529;
 }
 .main_header .megamenu {
   display: none;
@@ -3577,12 +3586,12 @@ h2 + .expand_img_grid {
 }
 .acc__title .acco_sign {
   top: 50%;
-  right: 12px;
+  right: 16px;
   position: absolute;
   transform: translateY(-50%);
 }
 .acc__title .acco_sign img {
-  width: 24px;
+  width: 18px;
 }
 .acc__title.active .acco_sign img {
   transform: rotate(180deg);
@@ -3667,8 +3676,7 @@ h2 + .expand_img_grid {
 .sort_boxResult select {
   min-width: 217px;
   min-height: 40px;
-  border-radius: 5px;
-  background-position: top 10px right 12px;
+  background-position: top 15px right 16px;
 }
 
 .event_wraper .event_top_filter {
@@ -6740,6 +6748,23 @@ ul.amenitiy-list-wrapper li {
   margin-left: auto;
 }
 
+.link_previous_page {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  color: #40408C;
+  display: inline-block;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.link_previous_page img {
+  margin-right: 5px;
+}
+.link_previous_page:hover {
+  color: #333354;
+}
+
 .rp_content ul {
   list-style: none;
   padding: 0px;
@@ -6842,49 +6867,59 @@ ul.amenitiy-list-wrapper li {
   align-items: center;
 }
 .main_acco_title .date_meet {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 104px;
-  min-height: 110px;
+  min-width: 120px;
+  padding: 8px 16px;
   text-align: center;
-  flex-direction: column;
-  background: #555582;
-}
-.main_acco_title .date_meet h4 {
-  color: #ffffff;
-  margin-bottom: 0;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
+  background-color: #C9E3F7;
 }
 .main_acco_title .date_meet span {
-  color: #ffffff;
   font-family: "Source Sans Pro", sans-serif;
+  color: #030504;
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 150%;
+}
+.main_acco_title .date_meet span.meet-day {
+  font-size: 48px;
+  line-height: 25px;
 }
 .main_acco_title .acco_title_info {
   flex-grow: 1;
-  padding: 10px 25px;
+  padding: 7px 24px;
   padding-right: 45px;
 }
 .main_acco_title .acco_title_info span.category {
-  color: #555582;
-  font-weight: 600;
-  font-size: 15px;
-  margin-bottom: 4px;
+  color: #030504;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 0;
+  line-height: normal;
   text-transform: uppercase;
+}
+.main_acco_title .acco_title_info span.meet_date {
+  color: #030504;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0;
+  line-height: 150%;
+}
+.main_acco_title .acco_title_info h3 {
+  margin-bottom: 4px;
 }
 .main_acco_title .acco_title_info p {
   margin: 0px;
+  line-height: normal;
 }
 .main_acco_title .accosign {
   top: 50%;
-  right: 20px;
+  right: 16px;
   transform: translateY(-50%);
   position: absolute;
 }
 .main_acco_title .accosign img {
-  width: 25px;
+  width: 20px;
 }
 .main_acco_title.active .accosign img {
   transform: rotate(180deg);
@@ -6913,12 +6948,27 @@ ul.amenitiy-list-wrapper li {
 }
 
 .acco_panel {
-  padding: 18px 40px 0;
+  padding: 16px;
   display: none;
+}
+.acco_panel .detail-meet-date {
+  margin-bottom: 4px;
+}
+.acco_panel .detail-meet-date span {
+  color: #333354;
+  font-weight: 700;
+  font-size: 16px;
+}
+.acco_panel .detail-meet-date span.devider {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.acco_panel p {
+  margin-bottom: 16px;
 }
 .acco_panel .btn_sm {
   min-width: 282px;
-  margin-bottom: 20px;
+  margin-top: 8px;
 }
 .acco_panel .agenda {
   display: flex;
@@ -6930,67 +6980,82 @@ ul.amenitiy-list-wrapper li {
   margin-bottom: 0px;
   padding-left: 10px;
 }
+.acco_panel .document_era {
+  padding-left: 8px;
+}
 .acco_panel .addeventatc.addtocal {
   padding-bottom: 0px !important;
 }
-.acco_panel h5 {
-  color: #030504;
-  text-transform: none;
+.acco_panel h4 {
+  margin-bottom: 16px;
 }
-.acco_panel h5:hover {
-  color: #555582;
+.acco_panel .location {
+  margin-bottom: 24px;
+}
+.acco_panel .location p {
+  margin-bottom: 0;
 }
 
 /*================================= Meeting Page End =======================================*/
 /*================================= Meeting details Page Start =======================================*/
 .meeting-detail {
-  padding-top: 24px;
-  padding-bottom: 80px;
-  background: #FCF3DE;
-}
-.meeting-detail h5 {
-  padding-top: 12px;
-}
-.meeting-detail h2 {
-  margin-bottom: 16px;
+  padding-top: 40px;
+  padding-bottom: 64px;
 }
 .meeting-detail .container {
   max-width: 1200px;
 }
-.meeting-detail .link {
-  margin-bottom: 0px;
+.meeting-detail .col_center {
+  max-width: 900px;
+  margin: 0 auto;
 }
-.meeting-detail .address {
-  padding-top: 0px;
+.meeting-detail h2 {
   margin-bottom: 16px;
+}
+.meeting-detail .detail-meet-date {
+  margin-bottom: 4px;
+}
+.meeting-detail .detail-meet-date span {
+  color: #333354;
+  font-weight: 700;
+  font-size: 16px;
+}
+.meeting-detail .detail-meet-date span.devider {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.meeting-detail p {
+  margin-bottom: 16px;
+}
+.meeting-detail .btn_sm {
+  min-width: 282px;
+  margin-top: 8px;
 }
 .meeting-detail .agenda {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
   padding-top: 10px;
-  text-transform: uppercase;
 }
 .meeting-detail .agenda .doc_block {
   margin-bottom: 0px;
   padding-left: 10px;
 }
-.meeting-detail .cancel-info {
-  margin-bottom: 20px;
+.meeting-detail .document_era {
+  padding-left: 8px;
 }
 .meeting-detail .addeventatc.addtocal {
   padding-bottom: 0px !important;
 }
-.meeting-detail .slider_info .carousel-control-next,
-.meeting-detail .slider_info .carousel-control-prev {
-  width: auto;
+.meeting-detail h4 {
+  margin-bottom: 16px;
 }
-.meeting-detail .col_center {
-  max-width: 800px;
-  margin: 0 auto;
+.meeting-detail .location {
+  margin-bottom: 24px;
 }
-.meeting-detail .btn_sm {
-  margin-top: 16px;
+.meeting-detail .location p {
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
 /*================================= Meeting details Page End =======================================*/

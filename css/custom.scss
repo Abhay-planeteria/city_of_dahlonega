@@ -347,7 +347,7 @@ select {
     background-repeat: no-repeat;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-position: top 16px right 12px;
+    background-position: top 20px right 16px;
     min-width: 130px;
     background-size: 20px;
     color: $black;
@@ -649,6 +649,11 @@ input[type=checkbox]{
             min-height: 26px;
             option {
                 font-size: 16px;
+                color: $black !important;
+            }
+            &:focus{
+                box-shadow: none !important;
+                outline: none !important;
             }
         }
         select::-ms-expand {
@@ -796,7 +801,8 @@ input[type=checkbox]{
                 @include source-sans;
                 font-size: 20px;
                 margin-top: 17px;
-                padding: 0px 0px 16px 0px !important;
+                margin-bottom: 16px;
+                padding: 0px !important;
                 text-align: center;
                 @include all;
                 line-height: normal;
@@ -813,7 +819,9 @@ input[type=checkbox]{
             }
             &:hover {
                 >a {
-                    text-decoration: underline;
+                    text-decoration: none;
+                    margin-bottom: 8px;
+                    border-bottom: solid 8px $goldenrod;
                 }
             }
         }
@@ -904,7 +912,8 @@ input[type=checkbox]{
         li.current-page-ancestor {
             >a {
                 color: $black !important;
-                border-bottom: solid 1px $goldenrod;
+                margin-bottom: 8px;
+                border-bottom: solid 8px $goldenrod;
             }
         }
     }
@@ -3670,11 +3679,11 @@ h2+.expand_img_grid {
     }
     .acco_sign {
         top: 50%;
-        right: 12px;
+        right: 16px;
         position: absolute;
         transform: translateY(-50%);
         img {
-            width: 24px;
+            width: 18px;
         }
     }
     &.active {
@@ -3768,8 +3777,7 @@ h2+.expand_img_grid {
 .sort_boxResult select {
     min-width: 217px;
     min-height: 40px;
-    border-radius: 5px;
-    background-position: top 10px right 12px;
+    background-position: top 15px right 16px;
     //result end
 }
 
@@ -6953,6 +6961,24 @@ ul.amenitiy-list-wrapper{
     }
 }
 
+//Previous page Link
+.link_previous_page{
+    @include source-sans;
+    @include bolder;
+    font-size: 16px;
+    line-height: 150%;
+    color: $dark-slate-blue;
+    display: inline-block;
+    margin-bottom: 16px;
+    cursor: pointer;
+    img{
+        margin-right: 5px;
+    }
+    &:hover{
+        color: $jacarta;
+    }
+}
+
 .rp_content {
     ul {
         list-style: none;
@@ -7062,47 +7088,58 @@ ul.amenitiy-list-wrapper{
     //background: $tertiary;
     align-items: center;
     .date_meet{
-        @include all;
-        width: 104px;
-        min-height: 110px;
+        min-width: 120px;
+        padding: 8px 16px;
         text-align: center;
-        flex-direction: column;
-        background: $tertiary;
-        h4{
-            color: $white;
-            margin-bottom: 0;
+        background-color: #C9E3F7;
+        span{
             @include source-sans;
-            @include medium;
-            text-transform: uppercase;
-        }
-        span {
-            color: $white;
-            @include source-sans;
+            color: $black;
+            display: block;
+            font-size: 24px;
+            @include bold;
+            @include upper;
+            line-height: 150%;
+            &.meet-day{
+                font-size: 48px;
+                line-height: 25px;
+            }
         }
     }
     .acco_title_info {
         flex-grow: 1;
-        padding: 10px 25px;
+        padding: 7px 24px;
         padding-right: 45px;
         span.category {
-            color: $tertiary;
-            font-weight: 600;
-            font-size: 15px;
-            margin-bottom: 4px;
+            color: $black;
+            font-weight: 400;
+            font-size: 14px;
+            margin-bottom: 0;
+            line-height: normal;
             text-transform: uppercase;
         }
-        //h3 {}
+        span.meet_date {
+            color: $black;
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 0;
+            line-height: 150%;
+        }
+        h3 {
+            margin-bottom: 4px;
+        }
         p {
             margin: 0px;
+            line-height: normal;
         }
     }
     .accosign {
         top: 50%;
-        right: 20px;
+        right: 16px;
         transform: translateY(-50%);
         position: absolute;
         img {
-            width: 25px;
+            width: 20px;
         }
     }
     &.active {
@@ -7139,12 +7176,27 @@ ul.amenitiy-list-wrapper{
 }
 
 .acco_panel {
-    padding: 18px 40px 0;
+    padding: 16px;
     display: none;
     //background: $tertiary;
+    .detail-meet-date {
+        margin-bottom: 4px;
+        span {
+            color: $jacarta;
+            @include bold;
+            font-size: 16px;
+            &.devider{
+                margin-left: 7px;
+                margin-right: 7px;
+            }
+        }
+    }
+    p{
+        margin-bottom: 16px;
+    }
     .btn_sm {
         min-width: 282px;
-        margin-bottom: 20px;
+        margin-top: 8px;
     }
     .agenda {
         display: flex;
@@ -7156,14 +7208,19 @@ ul.amenitiy-list-wrapper{
             padding-left: 10px;
         }
     }
+    .document_era{
+        padding-left: 8px;
+    }
     .addeventatc.addtocal {
         padding-bottom: 0px !important;
     }
-    h5{
-        color: $black;
-        text-transform: none;
-        &:hover{
-            color: $tertiary;
+    h4{
+        margin-bottom: 16px;
+    }
+    .location{
+        margin-bottom: 24px;
+        p{
+            margin-bottom: 0;
         }
     }
 }
@@ -7171,54 +7228,62 @@ ul.amenitiy-list-wrapper{
 
 /*================================= Meeting details Page Start =======================================*/
 .meeting-detail {
-    padding-top: 24px;
-    padding-bottom: 80px;
-    background: $primary;
-    h5 {
-        padding-top: 12px;
+    padding-top: 40px;
+    padding-bottom: 64px;
+    .container {
+        max-width: 1200px;
+    }
+    .col_center{
+        max-width: 900px;
+        margin: 0 auto;
     }
     h2{
         margin-bottom: 16px;
     }
-    .container {
-        max-width: 1200px;
+    .detail-meet-date {
+        margin-bottom: 4px;
+        span {
+            color: $jacarta;
+            @include bold;
+            font-size: 16px;
+            &.devider{
+                margin-left: 7px;
+                margin-right: 7px;
+            }
+        }
     }
-    .link {
-        margin-bottom: 0px;
-    }
-    .address {
-        padding-top: 0px;
+    p{
         margin-bottom: 16px;
+    }
+    .btn_sm {
+        min-width: 282px;
+        margin-top: 8px;
     }
     .agenda {
         display: flex;
         align-items: center;
         margin-bottom: 30px;
         padding-top: 10px;
-        text-transform: uppercase;
         .doc_block {
             margin-bottom: 0px;
             padding-left: 10px;
         }
     }
-    .cancel-info {
-        margin-bottom: 20px;
+    .document_era{
+        padding-left: 8px;
     }
     .addeventatc.addtocal {
         padding-bottom: 0px !important;
     }
-    .slider_info {
-        .carousel-control-next,
-        .carousel-control-prev {
-            width: auto;
+    h4{
+        margin-bottom: 16px;
+    }
+    .location{
+        margin-bottom: 24px;
+        p{
+            font-size: 18px;
+            margin-bottom: 0;
         }
-    }
-    .col_center{
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    .btn_sm{
-        margin-top: 16px;
     }
 }
 
