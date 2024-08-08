@@ -690,6 +690,7 @@ input[type=checkbox]{
             font-family: 'Source Sans Pro', sans-serif !important;
             font-size: 16px !important;
         }
+        .proloading,
         .proclose {
             right: 30px;
             position: absolute !important;
@@ -823,6 +824,9 @@ input[type=checkbox]{
                     margin-bottom: 8px;
                     border-bottom: solid 8px $goldenrod;
                 }
+            }
+            li:hover a{
+                text-decoration: underline;
             }
         }
         .dropdown-menu {
@@ -1117,27 +1121,34 @@ div.asp_r.asp_r_1.vertical{
             min-height: auto;
             object-fit: none;
         }
-        p{
-            color: $white;
-            font-size: 24px;
-            line-height: 30px;
-            margin-bottom: 5px;
-            @media (max-width: 767.98px) {
-                font-size: 18px;
-                line-height: 24px;
+        h1{
+            p{
+                color: $white;
+                @include regular;
+                @include goudy-bookletter;
+                font-size: 55px;
+                line-height: 75px;
+                margin-bottom: 0;
+                text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+                @media (max-width: 767.98px) {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
             }
-        }
-        h2{
-            color: $white;
-            @include regular;
-            @include goudy-bookletter;
-            font-size: 55px;
-            line-height: 75px;
-            margin-bottom: 0;
-            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-            @media (max-width: 767.98px) {
-                font-size: 40px;
-                line-height: 50px;
+            br{
+                display: none;
+            }
+            span{
+                color: $white;
+                font-size: 24px;
+                @include regular;
+                line-height: 30px;
+                margin-bottom: 5px;
+                display: block;
+                @media (max-width: 767.98px) {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
             }
         }
     }
@@ -2243,7 +2254,9 @@ div.asp_r.asp_r_1.vertical{
         display: block;
     }
 }
-.quotePara{
+.quotePara,
+blockquote.wp-block-quote,
+.wp-block-quote{
     padding-left: 48px;
     padding-right: 48px;
     margin-bottom: 24px;
@@ -2254,14 +2267,23 @@ div.asp_r.asp_r_1.vertical{
         padding-left: 0;
         padding-right: 0;
     }
-    .message{
+    .message,
+    p{
         @include italic;
         @include semi;
         margin-bottom: 16px
     }
-    .msg-auth{
+    .msg-auth,
+    cite{
         @include bold;
+        @include source-sans;
+        font-size: 16px;
+        margin-block-start: 0;
     }
+}
+blockquote.wp-block-quote,
+.wp-block-quote{
+    border-left: 0;
 }
 
 .main_breadcrumb {
@@ -3215,6 +3237,7 @@ h2+.expand_img_grid {
             }
             .active {
                 .plus-minus_icon {
+                    padding-top: 0;
                     background: $tertiary;
                     img {
                         @include rotate;
@@ -3309,6 +3332,7 @@ h2+.expand_img_grid {
         height: 30px;
         display: flex;
         margin: 0 auto;
+        padding-top: 3px;
         position: relative;
         align-items: center;
         border-radius: 50px;
@@ -3669,6 +3693,12 @@ h2+.expand_img_grid {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     &:hover {
         border: 1px solid $tertiary;
+        .acco_sign{
+            background: $tertiary;
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
     }
     h6 {
         margin: 0px;
@@ -3680,15 +3710,28 @@ h2+.expand_img_grid {
     .acco_sign {
         top: 50%;
         right: 16px;
-        position: absolute;
         transform: translateY(-50%);
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        padding-top: 3px;
+        align-items: center;
+        border-radius: 50px;
+        background: transparent;
+        justify-content: center;
         img {
             width: 18px;
         }
     }
     &.active {
-        .acco_sign img {
-            transform: rotate(180deg);
+        .acco_sign{
+            background: $tertiary;
+            padding-top: 0;
+            img {
+                filter: brightness(0) invert(1);
+                transform: rotate(180deg);
+            }
         }
     }
 }
@@ -6313,6 +6356,11 @@ body .is-layout-constrained>.wp-block-group {
                             @include underline;
                         }
                     }
+                    &.active{
+                        .accosign {
+                            padding-top: 0;
+                        }
+                    }
                 }
                 &.accordion_block{
                     .main_acco_title{
@@ -6376,6 +6424,7 @@ body .is-layout-constrained>.wp-block-group {
             width: 30px;
             height: 30px;
             display: flex;
+            padding-top: 3px;
             align-items: center;
             border-radius: 50px;
             background: transparent;
@@ -6409,6 +6458,15 @@ body .is-layout-constrained>.wp-block-group {
                 &:hover{
                     outline: 1px solid $jacarta;
                     .accosign {
+                        background: $tertiary;
+                        img {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+                }
+                &.active{
+                    .accosign {
+                        padding-top: 0;
                         background: $tertiary;
                         img {
                             filter: brightness(0) invert(1);
@@ -6466,6 +6524,8 @@ body .is-layout-constrained>.wp-block-group {
                 padding-top: 8px;
                 img{
                     margin-right: 24px;
+                    width: 100%;
+                    max-width: 150px;
                 }
                 .addrs_box{
                     padding-top: 16px;
@@ -6914,9 +6974,9 @@ ul.amenitiy-list-wrapper{
         .accordion_era {
             margin-top: 32px;
             .accordion_block {
-                cursor: pointer;
                 margin-bottom: 18px;
                 .main_acco_title{
+                    cursor: pointer;
                     background: $white;
                     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
                 }
@@ -7116,7 +7176,6 @@ ul.amenitiy-list-wrapper{
             font-size: 14px;
             margin-bottom: 0;
             line-height: normal;
-            text-transform: uppercase;
         }
         span.meet_date {
             color: $black;

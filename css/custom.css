@@ -683,6 +683,7 @@ input[type=checkbox] {
   font-family: "Source Sans Pro", sans-serif !important;
   font-size: 16px !important;
 }
+.main_header .top_search .proloading,
 .main_header .top_search .proclose {
   right: 30px;
   position: absolute !important;
@@ -807,6 +808,9 @@ input[type=checkbox] {
   text-decoration: none;
   margin-bottom: 8px;
   border-bottom: solid 8px #D6A529;
+}
+.main_header .navbar-nav > li li:hover a {
+  text-decoration: underline;
 }
 .main_header .navbar-nav .dropdown-menu {
   width: 350px;
@@ -1094,19 +1098,7 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
   -o-object-fit: none;
      object-fit: none;
 }
-.main_banner .carousel-caption p {
-  color: #ffffff;
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 5px;
-}
-@media (max-width: 767.98px) {
-  .main_banner .carousel-caption p {
-    font-size: 18px;
-    line-height: 24px;
-  }
-}
-.main_banner .carousel-caption h2 {
+.main_banner .carousel-caption h1 p {
   color: #ffffff;
   font-weight: 400;
   font-family: "Goudy Bookletter 1911", sans-serif;
@@ -1116,9 +1108,26 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 767.98px) {
-  .main_banner .carousel-caption h2 {
+  .main_banner .carousel-caption h1 p {
     font-size: 40px;
     line-height: 50px;
+  }
+}
+.main_banner .carousel-caption h1 br {
+  display: none;
+}
+.main_banner .carousel-caption h1 span {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 5px;
+  display: block;
+}
+@media (max-width: 767.98px) {
+  .main_banner .carousel-caption h1 span {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 .main_banner .carousel-control-next {
@@ -2234,27 +2243,51 @@ div.asp_r.asp_r_1.vertical .results .item .asp_image {
   display: block;
 }
 
-.quotePara {
+.quotePara,
+blockquote.wp-block-quote,
+.wp-block-quote {
   padding-left: 48px;
   padding-right: 48px;
   margin-bottom: 24px;
 }
-.quotePara.wp-block-group {
+.quotePara.wp-block-group,
+blockquote.wp-block-quote.wp-block-group,
+.wp-block-quote.wp-block-group {
   padding: 20px !important;
 }
 @media (max-width: 767.98px) {
-  .quotePara {
+  .quotePara,
+  blockquote.wp-block-quote,
+  .wp-block-quote {
     padding-left: 0;
     padding-right: 0;
   }
 }
-.quotePara .message {
+.quotePara .message,
+.quotePara p,
+blockquote.wp-block-quote .message,
+blockquote.wp-block-quote p,
+.wp-block-quote .message,
+.wp-block-quote p {
   font-style: italic;
   font-weight: 600;
   margin-bottom: 16px;
 }
-.quotePara .msg-auth {
+.quotePara .msg-auth,
+.quotePara cite,
+blockquote.wp-block-quote .msg-auth,
+blockquote.wp-block-quote cite,
+.wp-block-quote .msg-auth,
+.wp-block-quote cite {
   font-weight: 700;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  margin-block-start: 0;
+}
+
+blockquote.wp-block-quote,
+.wp-block-quote {
+  border-left: 0;
 }
 
 .main_breadcrumb {
@@ -3134,6 +3167,7 @@ h2 + .expand_img_grid {
   text-decoration: none;
 }
 .expanding-grid .links > li .active .plus-minus_icon {
+  padding-top: 0;
   background: #555582;
 }
 .expanding-grid .links > li .active .plus-minus_icon img {
@@ -3218,6 +3252,7 @@ h2 + .expand_img_grid {
   height: 30px;
   display: flex;
   margin: 0 auto;
+  padding-top: 3px;
   position: relative;
   align-items: center;
   border-radius: 50px;
@@ -3577,6 +3612,12 @@ h2 + .expand_img_grid {
 .acc__title:hover {
   border: 1px solid #555582;
 }
+.acc__title:hover .acco_sign {
+  background: #555582;
+}
+.acc__title:hover .acco_sign img {
+  filter: brightness(0) invert(1);
+}
 .acc__title h6 {
   margin: 0px;
   color: #030504;
@@ -3587,13 +3628,26 @@ h2 + .expand_img_grid {
 .acc__title .acco_sign {
   top: 50%;
   right: 16px;
-  position: absolute;
   transform: translateY(-50%);
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  padding-top: 3px;
+  align-items: center;
+  border-radius: 50px;
+  background: transparent;
+  justify-content: center;
 }
 .acc__title .acco_sign img {
   width: 18px;
 }
+.acc__title.active .acco_sign {
+  background: #555582;
+  padding-top: 0;
+}
 .acc__title.active .acco_sign img {
+  filter: brightness(0) invert(1);
   transform: rotate(180deg);
 }
 
@@ -6110,6 +6164,9 @@ body .is-layout-constrained > .wp-block-group {
 .directory-wrapper .directory-content .accordion_era .acco_link .main_acco_title:hover .doc_block {
   text-decoration: underline;
 }
+.directory-wrapper .directory-content .accordion_era .acco_link .main_acco_title.active .accosign {
+  padding-top: 0;
+}
 .directory-wrapper .directory-content .accordion_era .acco_link.accordion_block .main_acco_title .document_era .doc_block {
   color: #030504;
 }
@@ -6162,6 +6219,7 @@ body .is-layout-constrained > .wp-block-group {
   width: 30px;
   height: 30px;
   display: flex;
+  padding-top: 3px;
   align-items: center;
   border-radius: 50px;
   background: transparent;
@@ -6201,6 +6259,13 @@ body .is-layout-constrained > .wp-block-group {
   background: #555582;
 }
 .staff-directory-wrapper .directory-content .accordion_era .accordion_block .main_acco_title:hover .accosign img {
+  filter: brightness(0) invert(1);
+}
+.staff-directory-wrapper .directory-content .accordion_era .accordion_block .main_acco_title.active .accosign {
+  padding-top: 0;
+  background: #555582;
+}
+.staff-directory-wrapper .directory-content .accordion_era .accordion_block .main_acco_title.active .accosign img {
   filter: brightness(0) invert(1);
 }
 .staff-directory-wrapper .directory-content .accordion_era .accordion_block .main_acco_title .acco_title_info {
@@ -6259,6 +6324,8 @@ body .is-layout-constrained > .wp-block-group {
 }
 .staff-directory-wrapper .directory-content .accordion_era .accordion_block .acco_panel-inner img {
   margin-right: 24px;
+  width: 100%;
+  max-width: 150px;
 }
 .staff-directory-wrapper .directory-content .accordion_era .accordion_block .acco_panel-inner .addrs_box {
   padding-top: 16px;
@@ -6704,10 +6771,10 @@ ul.amenitiy-list-wrapper li {
   margin-top: 32px;
 }
 .meeting-wraper .meeting-content .accordion_era .accordion_block {
-  cursor: pointer;
   margin-bottom: 18px;
 }
 .meeting-wraper .meeting-content .accordion_era .accordion_block .main_acco_title {
+  cursor: pointer;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
@@ -6896,7 +6963,6 @@ ul.amenitiy-list-wrapper li {
   font-size: 14px;
   margin-bottom: 0;
   line-height: normal;
-  text-transform: uppercase;
 }
 .main_acco_title .acco_title_info span.meet_date {
   color: #030504;
